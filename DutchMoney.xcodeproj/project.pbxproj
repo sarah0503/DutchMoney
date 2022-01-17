@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353CE2795E95F0021FFF6 /* AppDelegate.swift */; };
+		059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353D02795E95F0021FFF6 /* SceneDelegate.swift */; };
+		059353D32795E95F0021FFF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353D22795E95F0021FFF6 /* ViewController.swift */; };
+		059353D62795E95F0021FFF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059353D42795E95F0021FFF6 /* Main.storyboard */; };
+		059353D82795E9680021FFF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059353D72795E9680021FFF6 /* Assets.xcassets */; };
+		059353DB2795E9680021FFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059353D92795E9680021FFF6 /* LaunchScreen.storyboard */; };
+		059353E62795E9680021FFF6 /* DutchMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353E52795E9680021FFF6 /* DutchMoneyTests.swift */; };
+		059353F12795E9680021FFF6 /* DutchMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353F02795E9680021FFF6 /* DutchMoneyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		059353E22795E9680021FFF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 059353C32795E95E0021FFF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 059353CA2795E95F0021FFF6;
+			remoteInfo = DutchMoney;
+		};
+		059353ED2795E9680021FFF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 059353C32795E95E0021FFF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 059353CA2795E95F0021FFF6;
+			remoteInfo = DutchMoney;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		059353CB2795E95F0021FFF6 /* DutchMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		059353CE2795E95F0021FFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		059353D02795E95F0021FFF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		059353D22795E95F0021FFF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		059353D52795E95F0021FFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		059353D72795E9680021FFF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		059353DA2795E9680021FFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		059353DC2795E9680021FFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		059353E12795E9680021FFF6 /* DutchMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DutchMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		059353E52795E9680021FFF6 /* DutchMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutchMoneyTests.swift; sourceTree = "<group>"; };
+		059353E72795E9680021FFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		059353EC2795E9680021FFF6 /* DutchMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DutchMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		059353F02795E9680021FFF6 /* DutchMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutchMoneyUITests.swift; sourceTree = "<group>"; };
+		059353F22795E9680021FFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		059353C82795E95F0021FFF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		059353DE2795E9680021FFF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		059353E92795E9680021FFF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		059353C22795E95E0021FFF6 = {
+			isa = PBXGroup;
+			children = (
+				059353CD2795E95F0021FFF6 /* DutchMoney */,
+				059353E42795E9680021FFF6 /* DutchMoneyTests */,
+				059353EF2795E9680021FFF6 /* DutchMoneyUITests */,
+				059353CC2795E95F0021FFF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		059353CC2795E95F0021FFF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				059353CB2795E95F0021FFF6 /* DutchMoney.app */,
+				059353E12795E9680021FFF6 /* DutchMoneyTests.xctest */,
+				059353EC2795E9680021FFF6 /* DutchMoneyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		059353CD2795E95F0021FFF6 /* DutchMoney */ = {
+			isa = PBXGroup;
+			children = (
+				059353CE2795E95F0021FFF6 /* AppDelegate.swift */,
+				059353D02795E95F0021FFF6 /* SceneDelegate.swift */,
+				059353D22795E95F0021FFF6 /* ViewController.swift */,
+				059353D42795E95F0021FFF6 /* Main.storyboard */,
+				059353D72795E9680021FFF6 /* Assets.xcassets */,
+				059353D92795E9680021FFF6 /* LaunchScreen.storyboard */,
+				059353DC2795E9680021FFF6 /* Info.plist */,
+			);
+			path = DutchMoney;
+			sourceTree = "<group>";
+		};
+		059353E42795E9680021FFF6 /* DutchMoneyTests */ = {
+			isa = PBXGroup;
+			children = (
+				059353E52795E9680021FFF6 /* DutchMoneyTests.swift */,
+				059353E72795E9680021FFF6 /* Info.plist */,
+			);
+			path = DutchMoneyTests;
+			sourceTree = "<group>";
+		};
+		059353EF2795E9680021FFF6 /* DutchMoneyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				059353F02795E9680021FFF6 /* DutchMoneyUITests.swift */,
+				059353F22795E9680021FFF6 /* Info.plist */,
+			);
+			path = DutchMoneyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		059353CA2795E95F0021FFF6 /* DutchMoney */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 059353F52795E9680021FFF6 /* Build configuration list for PBXNativeTarget "DutchMoney" */;
+			buildPhases = (
+				059353C72795E95F0021FFF6 /* Sources */,
+				059353C82795E95F0021FFF6 /* Frameworks */,
+				059353C92795E95F0021FFF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DutchMoney;
+			productName = DutchMoney;
+			productReference = 059353CB2795E95F0021FFF6 /* DutchMoney.app */;
+			productType = "com.apple.product-type.application";
+		};
+		059353E02795E9680021FFF6 /* DutchMoneyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 059353F82795E9680021FFF6 /* Build configuration list for PBXNativeTarget "DutchMoneyTests" */;
+			buildPhases = (
+				059353DD2795E9680021FFF6 /* Sources */,
+				059353DE2795E9680021FFF6 /* Frameworks */,
+				059353DF2795E9680021FFF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				059353E32795E9680021FFF6 /* PBXTargetDependency */,
+			);
+			name = DutchMoneyTests;
+			productName = DutchMoneyTests;
+			productReference = 059353E12795E9680021FFF6 /* DutchMoneyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		059353EB2795E9680021FFF6 /* DutchMoneyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 059353FB2795E9680021FFF6 /* Build configuration list for PBXNativeTarget "DutchMoneyUITests" */;
+			buildPhases = (
+				059353E82795E9680021FFF6 /* Sources */,
+				059353E92795E9680021FFF6 /* Frameworks */,
+				059353EA2795E9680021FFF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				059353EE2795E9680021FFF6 /* PBXTargetDependency */,
+			);
+			name = DutchMoneyUITests;
+			productName = DutchMoneyUITests;
+			productReference = 059353EC2795E9680021FFF6 /* DutchMoneyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		059353C32795E95E0021FFF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					059353CA2795E95F0021FFF6 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					059353E02795E9680021FFF6 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 059353CA2795E95F0021FFF6;
+					};
+					059353EB2795E9680021FFF6 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 059353CA2795E95F0021FFF6;
+					};
+				};
+			};
+			buildConfigurationList = 059353C62795E95E0021FFF6 /* Build configuration list for PBXProject "DutchMoney" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 059353C22795E95E0021FFF6;
+			productRefGroup = 059353CC2795E95F0021FFF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				059353CA2795E95F0021FFF6 /* DutchMoney */,
+				059353E02795E9680021FFF6 /* DutchMoneyTests */,
+				059353EB2795E9680021FFF6 /* DutchMoneyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		059353C92795E95F0021FFF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059353DB2795E9680021FFF6 /* LaunchScreen.storyboard in Resources */,
+				059353D82795E9680021FFF6 /* Assets.xcassets in Resources */,
+				059353D62795E95F0021FFF6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		059353DF2795E9680021FFF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		059353EA2795E9680021FFF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		059353C72795E95F0021FFF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059353D32795E95F0021FFF6 /* ViewController.swift in Sources */,
+				059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */,
+				059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		059353DD2795E9680021FFF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059353E62795E9680021FFF6 /* DutchMoneyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		059353E82795E9680021FFF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059353F12795E9680021FFF6 /* DutchMoneyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		059353E32795E9680021FFF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 059353CA2795E95F0021FFF6 /* DutchMoney */;
+			targetProxy = 059353E22795E9680021FFF6 /* PBXContainerItemProxy */;
+		};
+		059353EE2795E9680021FFF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 059353CA2795E95F0021FFF6 /* DutchMoney */;
+			targetProxy = 059353ED2795E9680021FFF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		059353D42795E95F0021FFF6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				059353D52795E95F0021FFF6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		059353D92795E9680021FFF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				059353DA2795E9680021FFF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		059353F32795E9680021FFF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		059353F42795E9680021FFF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		059353F62795E9680021FFF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DutchMoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sarah.DutchMoney;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		059353F72795E9680021FFF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DutchMoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sarah.DutchMoney;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		059353F92795E9680021FFF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DutchMoneyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sarah.DutchMoneyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DutchMoney.app/DutchMoney";
+			};
+			name = Debug;
+		};
+		059353FA2795E9680021FFF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DutchMoneyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sarah.DutchMoneyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DutchMoney.app/DutchMoney";
+			};
+			name = Release;
+		};
+		059353FC2795E9680021FFF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DutchMoneyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sarah.DutchMoneyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DutchMoney;
+			};
+			name = Debug;
+		};
+		059353FD2795E9680021FFF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DutchMoneyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sarah.DutchMoneyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DutchMoney;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		059353C62795E95E0021FFF6 /* Build configuration list for PBXProject "DutchMoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				059353F32795E9680021FFF6 /* Debug */,
+				059353F42795E9680021FFF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		059353F52795E9680021FFF6 /* Build configuration list for PBXNativeTarget "DutchMoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				059353F62795E9680021FFF6 /* Debug */,
+				059353F72795E9680021FFF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		059353F82795E9680021FFF6 /* Build configuration list for PBXNativeTarget "DutchMoneyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				059353F92795E9680021FFF6 /* Debug */,
+				059353FA2795E9680021FFF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		059353FB2795E9680021FFF6 /* Build configuration list for PBXNativeTarget "DutchMoneyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				059353FC2795E9680021FFF6 /* Debug */,
+				059353FD2795E9680021FFF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 059353C32795E95E0021FFF6 /* Project object */;
+}
