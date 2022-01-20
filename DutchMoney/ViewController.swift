@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -45,6 +46,15 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func RegisterButtonTouched(_ sender: UIButton) {
+        let newVC = self.storyboard?.instantiateViewController(identifier: "registBoard")
+        newVC?.modalTransitionStyle  = .coverVertical
+        newVC?.modalPresentationStyle = .automatic
+        self.present(newVC!, animated: true, completion: nil)
+    }
+    //    @IBAction func registerButton(segue : UIStoryboardSegue {
+//    }
     
 }
 

@@ -78,7 +78,8 @@
                                 <rect key="frame" x="244" y="727" width="52" height="30"/>
                                 <state key="normal" title="회원가입"/>
                                 <connections>
-                                    <segue destination="aBF-Qp-2Sb" kind="show" id="stp-AT-U0j"/>
+                                    <action selector="RegisterButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="knd-W9-MFi"/>
+                                    <segue destination="aBF-Qp-2Sb" kind="presentation" id="1gg-NT-LbV"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력해주세요. " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rjg-VH-Hwg">
@@ -123,20 +124,21 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="autoLogin" destination="dJh-qC-Hz1" id="Itb-sk-enI"/>
                         <outlet property="emailTextField" destination="Zs8-tQ-JbO" id="YoT-9n-EBE"/>
                         <outlet property="pwTextField" destination="Rjg-VH-Hwg" id="4Qj-fe-FuN"/>
+                        <segue destination="WDQ-uM-EGk" kind="unwind" unwindAction="registerButtonWithSegue:" id="X52-Vb-EuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="WDQ-uM-EGk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="14" y="84"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5iN-bO-BAU">
             <objects>
-                <viewController id="aBF-Qp-2Sb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ghL-i2-qqz">
+                <viewController storyboardIdentifier="registBoard" id="aBF-Qp-2Sb" customClass="ViewController" customModule="DutchMoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="registView" id="ghL-i2-qqz">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -185,6 +187,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0d-Bf-b5w">
                                 <rect key="frame" x="210" y="252" width="30" height="30"/>
                                 <state key="normal" title="완료"/>
+                                <connections>
+                                    <action selector="registButtonTouched:" destination="aBF-Qp-2Sb" eventType="touchUpInside" id="DXe-JE-3Hc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xLA-G2-Hgk"/>
@@ -207,6 +212,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aWD-Ib-i8V"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="w9z-Ro-AFb" id="i2P-ZW-CfY"/>
+                        <outlet property="pwTextField" destination="Za7-H8-5t5" id="hST-8w-1BD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dz-py-9hP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

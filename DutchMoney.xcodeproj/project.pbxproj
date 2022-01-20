@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053D68DC2799ACDA004F2EE0 /* registVC.swift */; };
 		05855D4027987960002DB255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05855D3F27987960002DB255 /* GoogleService-Info.plist */; };
 		059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353CE2795E95F0021FFF6 /* AppDelegate.swift */; };
 		059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353D02795E95F0021FFF6 /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		053D68DC2799ACDA004F2EE0 /* registVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registVC.swift; sourceTree = "<group>"; };
 		05855D3F27987960002DB255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		059353CB2795E95F0021FFF6 /* DutchMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059353CE2795E95F0021FFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				059353D72795E9680021FFF6 /* Assets.xcassets */,
 				059353D92795E9680021FFF6 /* LaunchScreen.storyboard */,
 				059353DC2795E9680021FFF6 /* Info.plist */,
+				053D68DC2799ACDA004F2EE0 /* registVC.swift */,
 			);
 			path = DutchMoney;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */,
 				059353D32795E95F0021FFF6 /* ViewController.swift in Sources */,
 				059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */,
 				059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */,
