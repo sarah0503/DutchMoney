@@ -6,14 +6,45 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var autoLogin: UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+//        if let user = Auth.auth().currentUser{
+//            emailTextField.placeholder = "이미 로그인 된 상태입니다. "
+//            pwTextField.placeholder = "이미 로그인 된 상태입니다. "
+//
+//        }
+        
+        
     }
 
 
+    @IBAction func didTapAutoLogin(_ sender: UIButton) {
+        sender.isSelected.toggle()
+    }
+    
+    @IBAction func loginButtonTouched(_ sender: Any) {
+        Auth.auth().signIn(withEmail : emailTextField.text!, password : pwTextField.text!){ (user,error) in
+            
+            if user != nil{
+                print("login success")
+            }
+            else{
+                print("login fail")
+            }
+            
+        }
+    }
+    
 }
 
