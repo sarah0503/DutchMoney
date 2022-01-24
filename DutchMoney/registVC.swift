@@ -20,8 +20,8 @@ class registVC: UIViewController {
     }
     
     
-    @IBAction func registButtonTouched( sender: UIButton) {
-        
+
+    @IBAction func doneButtonTouched(_ sender: UIButton) {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: pwTextField.text!){
             (user,error) in
             if user != nil{
@@ -32,6 +32,12 @@ class registVC: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func temp(_ sender: Any) {
+        print("click")
+    }
+    
     /*
     // MARK: - Navigation
 

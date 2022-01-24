@@ -184,11 +184,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0d-Bf-b5w">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLZ-cC-1eY">
+                                <rect key="frame" x="89" y="294" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="temp:" destination="09C-0E-Kgg" eventType="touchUpInside" id="lko-rj-hG2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edt-Py-B6H">
                                 <rect key="frame" x="210" y="252" width="30" height="30"/>
                                 <state key="normal" title="완료"/>
                                 <connections>
-                                    <action selector="registButtonTouched:" destination="aBF-Qp-2Sb" eventType="touchUpInside" id="DXe-JE-3Hc"/>
+                                    <action selector="doneButtonTouched:" destination="09C-0E-Kgg" eventType="touchUpInside" id="yxL-XT-3hG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -198,16 +206,16 @@
                             <constraint firstItem="Za7-H8-5t5" firstAttribute="leading" secondItem="UJY-Wn-G4A" secondAttribute="leading" id="1W3-ML-pt3"/>
                             <constraint firstItem="w9z-Ro-AFb" firstAttribute="leading" secondItem="fGM-yd-gNQ" secondAttribute="trailing" constant="100" id="4r0-VE-wI4"/>
                             <constraint firstItem="aKi-0s-OvQ" firstAttribute="top" secondItem="xLA-G2-Hgk" secondAttribute="top" constant="60" id="9Bu-Nv-l6q"/>
-                            <constraint firstItem="v0d-Bf-b5w" firstAttribute="top" secondItem="Za7-H8-5t5" secondAttribute="bottom" constant="30" id="C6p-2d-sHc"/>
                             <constraint firstItem="w9z-Ro-AFb" firstAttribute="top" secondItem="UJY-Wn-G4A" secondAttribute="bottom" constant="30" id="JQa-nc-kfk"/>
                             <constraint firstItem="UJY-Wn-G4A" firstAttribute="leading" secondItem="aKi-0s-OvQ" secondAttribute="trailing" constant="100" id="NLW-mX-aJz"/>
                             <constraint firstAttribute="centerX" secondItem="aKi-0s-OvQ" secondAttribute="centerX" constant="100" id="UdF-cz-nrx"/>
                             <constraint firstItem="w9z-Ro-AFb" firstAttribute="leading" secondItem="UJY-Wn-G4A" secondAttribute="leading" id="Vpb-hP-xut"/>
-                            <constraint firstItem="v0d-Bf-b5w" firstAttribute="leading" secondItem="Za7-H8-5t5" secondAttribute="leading" id="Z0U-qG-HH3"/>
                             <constraint firstItem="Za7-H8-5t5" firstAttribute="top" secondItem="w9z-Ro-AFb" secondAttribute="bottom" constant="30" id="ed2-kP-UCi"/>
                             <constraint firstItem="UJY-Wn-G4A" firstAttribute="top" secondItem="aKi-0s-OvQ" secondAttribute="top" id="ew9-NK-hu8"/>
                             <constraint firstItem="Za7-H8-5t5" firstAttribute="leading" secondItem="CNm-T7-OmC" secondAttribute="trailing" constant="100" id="fCp-Ey-JJb"/>
                             <constraint firstItem="Za7-H8-5t5" firstAttribute="top" secondItem="CNm-T7-OmC" secondAttribute="top" id="inY-gQ-dWy"/>
+                            <constraint firstItem="Edt-Py-B6H" firstAttribute="leading" secondItem="Za7-H8-5t5" secondAttribute="leading" id="rVT-vn-DQq"/>
+                            <constraint firstItem="Edt-Py-B6H" firstAttribute="top" secondItem="Za7-H8-5t5" secondAttribute="bottom" constant="30" id="t7M-NU-LYm"/>
                             <constraint firstItem="w9z-Ro-AFb" firstAttribute="top" secondItem="fGM-yd-gNQ" secondAttribute="top" id="vyU-AA-tm2"/>
                         </constraints>
                     </view>
@@ -218,6 +226,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dz-py-9hP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="09C-0E-Kgg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="885" y="84"/>
         </scene>
