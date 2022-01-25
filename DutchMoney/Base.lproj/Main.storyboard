@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="14" y="84"/>
         </scene>
-        <!--View Controller-->
+        <!--RegistVC-->
         <scene sceneID="5iN-bO-BAU">
             <objects>
-                <viewController storyboardIdentifier="registBoard" id="aBF-Qp-2Sb" customClass="ViewController" customModule="DutchMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registBoard" id="aBF-Qp-2Sb" customClass="registVC" customModule="DutchMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="registView" id="ghL-i2-qqz">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,14 +189,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="temp:" destination="09C-0E-Kgg" eventType="touchUpInside" id="lko-rj-hG2"/>
+                                    <action selector="temp:" destination="aBF-Qp-2Sb" eventType="touchUpInside" id="J8z-8Y-UMQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edt-Py-B6H">
                                 <rect key="frame" x="210" y="252" width="30" height="30"/>
                                 <state key="normal" title="완료"/>
                                 <connections>
-                                    <action selector="doneButtonTouched:" destination="09C-0E-Kgg" eventType="touchUpInside" id="yxL-XT-3hG"/>
+                                    <action selector="doneButtonTouched:" destination="aBF-Qp-2Sb" eventType="touchUpInside" id="RbJ-Eg-EgQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -226,7 +226,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dz-py-9hP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="09C-0E-Kgg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="885" y="84"/>
         </scene>
