@@ -20,20 +20,32 @@ class registVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func temp(_ sender: UIButton) {
-        print("wow")
-    }
+    
     
     @IBAction func doneButtonTouched(_ sender: Any) {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: pwTextField.text!){
             (user,error) in
             if user != nil{
                 let sucessAlert = UIAlertController( title : "확인", message : "회원가입이 완료되었습니다 ", preferredStyle : UIAlertController.Style.alert)
-                let onAction = UIAlertAction(title : "확인" ,style: UIAlertAction.Style.default, handler: nil)
+                let onAction = UIAlertAction(title : "확인" ,style: UIAlertAction.Style.default, handler: {_ in
+                    let newVC = self.storyboard?.instantiateViewController(identifier: "mainBoard")
+                    newVC?.modalTransitionStyle  = .coverVertical
+                    newVC?.modalPresentationStyle = .automatic
+                    self.present(newVC!, animated: true, completion: nil)
+                })
+                sucessAlert.addAction(onAction)
+                self.present(sucessAlert, animated: true, completion: nil)
                 print("register success")
             }
             else{
+                let failAlert = UIAlertController( title : "확인", message : "회원가입이 정상적으로 처리되지 않았습니다. ", preferredStyle : UIAlertController.Style.alert)
+                let onAction = UIAlertAction(title : "확인" ,style: UIAlertAction.Style.default, handler: nil)
+                failAlert.addAction(onAction)
+                self.present(failAlert, animated: true, completion: nil)
                 print("register fail")
+                
+                //나중에 성공 케이스 나오면 옮기기..
+                
             }
         }
     }

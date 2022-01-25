@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053A0A0627A03D270035CB7E /* GroupAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A0527A03D270035CB7E /* GroupAddVC.swift */; };
+		053A0A0B27A03D420035CB7E /* GroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */; };
+		053A0A1327A0476D0035CB7E /* GroupMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A1227A0476D0035CB7E /* GroupMainVC.swift */; };
 		053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053D68DC2799ACDA004F2EE0 /* registVC.swift */; };
 		05855D4027987960002DB255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05855D3F27987960002DB255 /* GoogleService-Info.plist */; };
 		059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353CE2795E95F0021FFF6 /* AppDelegate.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		053A0A0527A03D270035CB7E /* GroupAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAddVC.swift; sourceTree = "<group>"; };
+		053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailVC.swift; sourceTree = "<group>"; };
+		053A0A1227A0476D0035CB7E /* GroupMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMainVC.swift; sourceTree = "<group>"; };
 		053D68DC2799ACDA004F2EE0 /* registVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registVC.swift; sourceTree = "<group>"; };
 		05855D3F27987960002DB255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		059353CB2795E95F0021FFF6 /* DutchMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +135,9 @@
 				059353D92795E9680021FFF6 /* LaunchScreen.storyboard */,
 				059353DC2795E9680021FFF6 /* Info.plist */,
 				053D68DC2799ACDA004F2EE0 /* registVC.swift */,
+				053A0A0527A03D270035CB7E /* GroupAddVC.swift */,
+				053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */,
+				053A0A1227A0476D0035CB7E /* GroupMainVC.swift */,
 			);
 			path = DutchMoney;
 			sourceTree = "<group>";
@@ -413,9 +422,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053A0A0B27A03D420035CB7E /* GroupDetailVC.swift in Sources */,
 				053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */,
 				059353D32795E95F0021FFF6 /* ViewController.swift in Sources */,
 				059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */,
+				053A0A0627A03D270035CB7E /* GroupAddVC.swift in Sources */,
+				053A0A1327A0476D0035CB7E /* GroupMainVC.swift in Sources */,
 				059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
