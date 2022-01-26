@@ -6,7 +6,14 @@
 //
 
 import UIKit
-var items = ["도라에몽", "짱구"]
+import FirebaseFirestore
+import Firebase
+//var GNames = ["도라에몽", "짱구"]
+//var GNames : String = ""
+//var GMoneys : Int = -1
+
+
+//let items = Firestore.firestore()
 
 class GroupMainVC: UIViewController {
    
@@ -17,6 +24,18 @@ class GroupMainVC: UIViewController {
         tvListView.delegate = self
         tvListView.dataSource = self
         super.viewDidLoad()
+        
+        func getData(of userIndex:Int){
+            var GNames : String
+            var GMoneys : Int
+            let ref :  DatabaseReference! = Database.database().reference()
+            ref.child("group").child(String(userIndex)).observeSingleEvent(of: .value, with : {
+                snapshot in
+                let value = snapshot.value as? NSDictionary
+                GNames = value?["GName"] as? String ?? "No string"
+                GMoneys = value?["GMoney"] as?Int ?? -1
+            })
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -43,13 +62,13 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return items.count
+        return GNames.count
     }
 
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.text = GNames[indexPath.row]
 //        cell.GroupLabelName.text = items[indexPath.row]
 
         // Configure the cell...
@@ -59,7 +78,7 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
     
     internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == .delete{
-            items.remove(at: indexPath.row)
+            GNames.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             
