@@ -6,10 +6,10 @@
 //
 
 import UIKit
+var items = ["도라에몽", "짱구"]
 
 class GroupMainVC: UIViewController {
    
-    var items = ["도라에몽", "짱구"]
     @IBOutlet var tvListView: UITableView!
     
     
@@ -49,14 +49,27 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
-        print(items.count)
         cell.textLabel?.text = items[indexPath.row]
-        print(items[indexPath.row])
 //        cell.GroupLabelName.text = items[indexPath.row]
 
         // Configure the cell...
 
         return cell
+    }
+    
+    internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete{
+            items.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            
+        } else if editingStyle == .insert{
+            
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tvListView.reloadData()
     }
     
     

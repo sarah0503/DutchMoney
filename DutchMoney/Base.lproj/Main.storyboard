@@ -220,7 +220,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jOM-qX-oca" secondAttribute="height" multiplier="23:15" id="T4T-xW-QDG"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="완료"/>
                                 <connections>
                                     <action selector="btnAddItem:" destination="6ui-o3-2S9" eventType="touchUpInside" id="ucQ-F0-aVs"/>
                                 </connections>

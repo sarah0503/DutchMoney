@@ -17,6 +17,9 @@ class GroupAddVC: UIViewController {
     }
     
     @IBAction func btnAddItem(_ sender: UIButton) {
+        items.append(tfAddItem.text!)
+        tfAddItem.text = ""
+        self.navigationController?.popViewController(animated: true)
     }
     
     /*
