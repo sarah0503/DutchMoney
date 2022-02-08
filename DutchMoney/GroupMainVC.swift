@@ -9,8 +9,8 @@ import UIKit
 import FirebaseFirestore
 import Firebase
 //var GNames = ["도라에몽", "짱구"]
-//var GNames : String = ""
-//var GMoneys : Int = -1
+var GNames : String = ""
+var GMoneys : Int = -1
 
 
 //let items = Firestore.firestore()
@@ -26,14 +26,16 @@ class GroupMainVC: UIViewController {
         super.viewDidLoad()
         
         func getData(of userIndex:Int){
-            var GNames : String
-            var GMoneys : Int
+            //var GNames : String
+            //var GMoneys : Int
             let ref :  DatabaseReference! = Database.database().reference()
             ref.child("group").child(String(userIndex)).observeSingleEvent(of: .value, with : {
                 snapshot in
                 let value = snapshot.value as? NSDictionary
                 GNames = value?["GName"] as? String ?? "No string"
                 GMoneys = value?["GMoney"] as?Int ?? -1
+                
+                print("고양이")
             })
         }
         // Do any additional setup after loading the view.
@@ -68,7 +70,8 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
-        cell.textLabel?.text = GNames[indexPath.row]
+      //  cell.textLabel?.text = GNames[indexPath.row] //살려야됨
+        
 //        cell.GroupLabelName.text = items[indexPath.row]
 
         // Configure the cell...
@@ -78,7 +81,7 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
     
     internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == .delete{
-            GNames.remove(at: indexPath.row)
+           // GNames.remove(at: indexPath.row) //살려야됨
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             
