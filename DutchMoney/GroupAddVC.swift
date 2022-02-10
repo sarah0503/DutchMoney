@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SQLite3
 
 class GroupAddVC: UIViewController {
 
@@ -17,9 +18,20 @@ class GroupAddVC: UIViewController {
     }
     
     @IBAction func btnAddItem(_ sender: UIButton) {
-        GNames.append(tfAddItem.text!)
-        tfAddItem.text = ""
+//        GNames.append(tfAddItem.text!)
+      //  tfAddItem.text = ""
         self.navigationController?.popViewController(animated: true)
+        
+        let filemgr = FileManager.default
+        let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let databasePath = dirPaths.appendingPathComponent("DutchMoney.sqlite").path
+        
+        let myDB = FMDatabase (path:databasePath)
+        
+        if myDB.open(){
+            let insertSQL = "INSERT INTO group_info VALUES ('\(tfAddItem.text!)', 0);"
+            let result = myDB.executeUpdate(insertSQL, withArgumentsIn: [])
+        }
     }
     
     /*
