@@ -8,9 +8,11 @@
 import UIKit
 import FirebaseFirestore
 import Firebase
+import SQLite3
 //var GNames = ["도라에몽", "짱구"]
-var GNames : String = ""
-var GMoneys : Int = -1
+var GNames = [String]()
+var GMoneys = [Int32]()
+var db : OpaquePointer?
 
 
 //let items = Firestore.firestore()
@@ -25,20 +27,58 @@ class GroupMainVC: UIViewController {
         tvListView.dataSource = self
         super.viewDidLoad()
         
-        func getData(of userIndex:Int){
-            //var GNames : String
-            //var GMoneys : Int
-            let ref :  DatabaseReference! = Database.database().reference()
-            ref.child("group").child(String(userIndex)).observeSingleEvent(of: .value, with : {
-                snapshot in
-                let value = snapshot.value as? NSDictionary
-                GNames = value?["GName"] as? String ?? "No string"
-                GMoneys = value?["GMoney"] as?Int ?? -1
-                
-                print("고양이")
-            })
-        }
+//        func getData(of userIndex:Int){
+//            //var GNames : String
+//            //var GMoneys : Int
+//            let ref :  DatabaseReference! = Database.database().reference()
+//            ref.child("group").child(String(userIndex)).observeSingleEvent(of: .value, with : {
+//                snapshot in
+//                let value = snapshot.value as? NSDictionary
+//                GNames = value?["GName"] as? String ?? "No string"
+//                GMoneys = value?["GMoney"] as?Int ?? -1
+//
+//                print("고양이")
+//            })
+//        }
+        
+        
         // Do any additional setup after loading the view.
+        
+        let filemgr = FileManager.default
+        let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let databasePath = dirPaths.appendingPathComponent("/Users/yoonsarah/DutchMoney.sqlite").path
+        
+        if !filemgr.fileExists(atPath: databasePath){
+            print("DB없음")
+        }
+        else{
+            let myDB = FMDatabase(path: databasePath as String)            if myDB == nil{
+                print("Error: \(myDB.lastErrorMessage())")
+            }
+            if myDB.open(){
+                let sql = "SELECT * FROM Group"
+                let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
+                
+                if(result == nil){
+                    print("Error: \(myDB.lastErrorMessage())")
+                }else{
+                    var gName = ""
+                    var gMoney : Int32
+                    GNames.removeAll()
+                    GMoneys.removeAll()
+                    
+                    while(result?.next() == true){
+                        gName = (result?.string(forColumn: "g_name"))!
+                        gMoney = (result?.int(forColumn: "g_money"))!
+                        
+                        GNames.append(gName)
+                        GMoneys.append(gMoney)
+                    }
+                }
+            }else{
+                print("Error: \(myDB.lastErrorMessage())")
+            }
+        }
     }
     
 
@@ -70,7 +110,7 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
-      //  cell.textLabel?.text = GNames[indexPath.row] //살려야됨
+        cell.textLabel?.text = GNames[indexPath.row] //살려야됨
         
 //        cell.GroupLabelName.text = items[indexPath.row]
 
@@ -81,7 +121,7 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
     
     internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == .delete{
-           // GNames.remove(at: indexPath.row) //살려야됨
+            GNames.remove(at: indexPath.row) //살려야됨
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             

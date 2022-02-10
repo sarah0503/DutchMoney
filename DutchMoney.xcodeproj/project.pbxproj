@@ -20,6 +20,12 @@
 		059353DB2795E9680021FFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059353D92795E9680021FFF6 /* LaunchScreen.storyboard */; };
 		059353E62795E9680021FFF6 /* DutchMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353E52795E9680021FFF6 /* DutchMoneyTests.swift */; };
 		059353F12795E9680021FFF6 /* DutchMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353F02795E9680021FFF6 /* DutchMoneyUITests.swift */; };
+		05BBB26627B4419800C809DE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BBB26527B4419800C809DE /* libsqlite3.tbd */; };
+		05BBB27627B4422B00C809DE /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB26D27B4422A00C809DE /* FMDatabaseQueue.m */; };
+		05BBB27727B4422B00C809DE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB26F27B4422A00C809DE /* FMDatabaseAdditions.m */; };
+		05BBB27827B4422B00C809DE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB27127B4422A00C809DE /* FMDatabase.m */; };
+		05BBB27927B4422B00C809DE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB27227B4422A00C809DE /* FMDatabasePool.m */; };
+		05BBB27A27B4422B00C809DE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB27527B4422B00C809DE /* FMResultSet.m */; };
 		138814FF8E8C9E9523D81ED0 /* Pods_DutchMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D7D3228F789487E85531B /* Pods_DutchMoney.framework */; };
 		29358DCE1C92A6DB8CA1F6BF /* Pods_DutchMoney_DutchMoneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472471437ECFEEA03D3A3B60 /* Pods_DutchMoney_DutchMoneyUITests.framework */; };
 		97B1DF3021A7AB8F2F7F5BD5 /* Pods_DutchMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6524BFB95B4DEB3E18CF16 /* Pods_DutchMoneyTests.framework */; };
@@ -62,6 +68,19 @@
 		059353EC2795E9680021FFF6 /* DutchMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DutchMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		059353F02795E9680021FFF6 /* DutchMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutchMoneyUITests.swift; sourceTree = "<group>"; };
 		059353F22795E9680021FFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05BBB26527B4419800C809DE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		05BBB26A27B4422900C809DE /* DutchMoney-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DutchMoney-Bridging-Header.h"; sourceTree = "<group>"; };
+		05BBB26B27B4422A00C809DE /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabasePool.h"; sourceTree = "<group>"; };
+		05BBB26C27B4422A00C809DE /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabaseQueue.h"; sourceTree = "<group>"; };
+		05BBB26D27B4422A00C809DE /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabaseQueue.m"; sourceTree = "<group>"; };
+		05BBB26E27B4422A00C809DE /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabase.h"; sourceTree = "<group>"; };
+		05BBB26F27B4422A00C809DE /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabaseAdditions.m"; sourceTree = "<group>"; };
+		05BBB27027B4422A00C809DE /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDB.h"; sourceTree = "<group>"; };
+		05BBB27127B4422A00C809DE /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabase.m"; sourceTree = "<group>"; };
+		05BBB27227B4422A00C809DE /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabasePool.m"; sourceTree = "<group>"; };
+		05BBB27327B4422B00C809DE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabaseAdditions.h"; sourceTree = "<group>"; };
+		05BBB27427B4422B00C809DE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMResultSet.h"; sourceTree = "<group>"; };
+		05BBB27527B4422B00C809DE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMResultSet.m"; sourceTree = "<group>"; };
 		305D7D3228F789487E85531B /* Pods_DutchMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DutchMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		472471437ECFEEA03D3A3B60 /* Pods_DutchMoney_DutchMoneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DutchMoney_DutchMoneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6524BFB95B4DEB3E18CF16 /* Pods_DutchMoneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DutchMoneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BBB26627B4419800C809DE /* libsqlite3.tbd in Frameworks */,
 				138814FF8E8C9E9523D81ED0 /* Pods_DutchMoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,12 +124,24 @@
 		059353C22795E95E0021FFF6 = {
 			isa = PBXGroup;
 			children = (
+				05BBB26E27B4422A00C809DE /* FMDatabase.h */,
+				05BBB27127B4422A00C809DE /* FMDatabase.m */,
+				05BBB27327B4422B00C809DE /* FMDatabaseAdditions.h */,
+				05BBB26F27B4422A00C809DE /* FMDatabaseAdditions.m */,
+				05BBB26B27B4422A00C809DE /* FMDatabasePool.h */,
+				05BBB27227B4422A00C809DE /* FMDatabasePool.m */,
+				05BBB26C27B4422A00C809DE /* FMDatabaseQueue.h */,
+				05BBB26D27B4422A00C809DE /* FMDatabaseQueue.m */,
+				05BBB27027B4422A00C809DE /* FMDB.h */,
+				05BBB27427B4422B00C809DE /* FMResultSet.h */,
+				05BBB27527B4422B00C809DE /* FMResultSet.m */,
 				059353CD2795E95F0021FFF6 /* DutchMoney */,
 				059353E42795E9680021FFF6 /* DutchMoneyTests */,
 				059353EF2795E9680021FFF6 /* DutchMoneyUITests */,
 				059353CC2795E95F0021FFF6 /* Products */,
 				7E8EADB6B77ECE146EC5394D /* Pods */,
 				506747A0D54DB7C5500C79E4 /* Frameworks */,
+				05BBB26A27B4422900C809DE /* DutchMoney-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +195,7 @@
 		506747A0D54DB7C5500C79E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05BBB26527B4419800C809DE /* libsqlite3.tbd */,
 				305D7D3228F789487E85531B /* Pods_DutchMoney.framework */,
 				472471437ECFEEA03D3A3B60 /* Pods_DutchMoney_DutchMoneyUITests.framework */,
 				5B6524BFB95B4DEB3E18CF16 /* Pods_DutchMoneyTests.framework */,
@@ -255,6 +288,7 @@
 				TargetAttributes = {
 					059353CA2795E95F0021FFF6 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					059353E02795E9680021FFF6 = {
 						CreatedOnToolsVersion = 12.2;
@@ -423,9 +457,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				053A0A0B27A03D420035CB7E /* GroupDetailVC.swift in Sources */,
+				05BBB27627B4422B00C809DE /* FMDatabaseQueue.m in Sources */,
 				053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */,
+				05BBB27827B4422B00C809DE /* FMDatabase.m in Sources */,
 				059353D32795E95F0021FFF6 /* ViewController.swift in Sources */,
+				05BBB27927B4422B00C809DE /* FMDatabasePool.m in Sources */,
+				05BBB27A27B4422B00C809DE /* FMResultSet.m in Sources */,
 				059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */,
+				05BBB27727B4422B00C809DE /* FMDatabaseAdditions.m in Sources */,
 				053A0A0627A03D270035CB7E /* GroupAddVC.swift in Sources */,
 				053A0A1327A0476D0035CB7E /* GroupMainVC.swift in Sources */,
 				059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */,
@@ -605,6 +644,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DutchMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -613,6 +653,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DutchMoney.list;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DutchMoney-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -624,6 +666,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DutchMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -632,6 +675,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.DutchMoney.list;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DutchMoney-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
