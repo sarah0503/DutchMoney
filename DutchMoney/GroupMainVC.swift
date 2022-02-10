@@ -179,7 +179,31 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
                 //tableView.deleteRows(at: [indexPath], with: .fade)
             }
             
+            if myDB.open(){
+                let sql = "SELECT * FROM group_info;"
+                let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
+                
+                if(result == nil){
+                    print("Error: \(myDB.lastErrorMessage())")
+                }else{
+                    var gName = ""
+                    var gMoney : Int32
+                    GNames.removeAll()
+                    GMoneys.removeAll()
+                    
+                    while(result?.next() == true){
+                        gName = (result?.string(forColumn: "g_name"))!
+                        gMoney = (result?.int(forColumn: "g_money"))!
+                        
+                        GNames.append(gName)
+                        GMoneys.append(gMoney)
+                    }
+                }
+            }else{
+                print("Error: \(myDB.lastErrorMessage())")
+            }
             
+            tvListView.reloadData()
             
             
         } else if editingStyle == .insert{
