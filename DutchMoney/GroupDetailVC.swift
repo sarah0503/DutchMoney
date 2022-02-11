@@ -10,12 +10,23 @@ import UIKit
 class GroupDetailVC: UIViewController {
 
     
-    @IBOutlet var lblItem: UILabel!
+    
+    @IBOutlet var groupLabel: UILabel!
+    var receiveGroup = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        groupLabel.text = receiveGroup
         // Do any additional setup after loading the view.
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func receiveGruop(group : String){
+        receiveGroup = group    }
+    
     
 
     /*

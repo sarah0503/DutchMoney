@@ -9,7 +9,7 @@ import UIKit
 import FirebaseFirestore
 import Firebase
 import SQLite3
-//var GNames = ["도라에몽", "짱구"]
+
 var GNames = [String]()
 var GMoneys = [Int32]()
 var db : OpaquePointer?
@@ -27,43 +27,22 @@ class GroupMainVC: UIViewController {
         tvListView.dataSource = self
         super.viewDidLoad()
         
-//        func getData(of userIndex:Int){
-//            //var GNames : String
-//            //var GMoneys : Int
-//            let ref :  DatabaseReference! = Database.database().reference()
-//            ref.child("group").child(String(userIndex)).observeSingleEvent(of: .value, with : {
-//                snapshot in
-//                let value = snapshot.value as? NSDictionary
-//                GNames = value?["GName"] as? String ?? "No string"
-//                GMoneys = value?["GMoney"] as?Int ?? -1
-//
-//                print("고양이")
-//            })
-//        }
-        
-        
         // Do any additional setup after loading the view.
         
         let filemgr = FileManager.default
         let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let databasePath = dirPaths.appendingPathComponent("DutchMoney.sqlite").path
-        
-        //if filemgr.fileExists(atPath: databasePath) == false{
             
-            let myDB = FMDatabase(path: databasePath as String)
-            if myDB.open(){
-                let sql_stmt = "CREATE TABLE IF NOT EXISTS group_info ( g_name TEXT NOT NULL, g_money INTEGER NOT NULL, PRIMARY KEY(g_name)) "
-                if !myDB.executeStatements(sql_stmt){
+        let myDB = FMDatabase(path: databasePath as String)
+        if myDB.open(){
+            let sql_stmt = "CREATE TABLE IF NOT EXISTS group_info ( g_name TEXT NOT NULL, g_money INTEGER NOT NULL, PRIMARY KEY(g_name)) "
+            if !myDB.executeStatements(sql_stmt){
                 
-                }
             }
-        //}
-       // else{
-           // let myDB = FMDatabase(path: databasePath as String)
-            print("DB있음")
+        }
             if myDB == nil{
-                print("Error: \(myDB.lastErrorMessage())")
-            }
+            print("Error: \(myDB.lastErrorMessage())")
+        }
             
             if myDB.open(){
                 let sql = "SELECT * FROM group_info;"
@@ -153,7 +132,7 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
-        cell.textLabel?.text = GNames[indexPath.row] //살려야됨
+        cell.textLabel?.text = GNames[indexPath.row]
         
 //        cell.GroupLabelName.text = items[indexPath.row]
 
@@ -210,7 +189,20 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
             
         }
     }
-    
+
+//    override func prepareForSegue(segue : UIStoryboardSegue, sender : AnyObject?){
+//    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PersonSegue"{
+            let cell = sender as! UITableViewCell
+            let indexPath = self.tvListView.indexPath(for: cell)
+            let nav = segue.destination as! UINavigationController
+            let detailView = nav.topViewController as! GroupDetailVC
+            detailView.receiveGruop(group: GNames[(indexPath?.row)!])
+           
+        }
+    }
     
     
     
