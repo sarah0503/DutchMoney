@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052B537427B8FBF8004BEADE /* PersonAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B537327B8FBF8004BEADE /* PersonAddVC.swift */; };
+		052B537E27B8FC1F004BEADE /* PersonDatailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B537D27B8FC1F004BEADE /* PersonDatailVC.swift */; };
 		053A0A0627A03D270035CB7E /* GroupAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A0527A03D270035CB7E /* GroupAddVC.swift */; };
 		053A0A0B27A03D420035CB7E /* GroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */; };
 		053A0A1327A0476D0035CB7E /* GroupMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A1227A0476D0035CB7E /* GroupMainVC.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052B537327B8FBF8004BEADE /* PersonAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAddVC.swift; sourceTree = "<group>"; };
+		052B537D27B8FC1F004BEADE /* PersonDatailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDatailVC.swift; sourceTree = "<group>"; };
 		053A0A0527A03D270035CB7E /* GroupAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAddVC.swift; sourceTree = "<group>"; };
 		053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailVC.swift; sourceTree = "<group>"; };
 		053A0A1227A0476D0035CB7E /* GroupMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMainVC.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 				053A0A0527A03D270035CB7E /* GroupAddVC.swift */,
 				053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */,
 				053A0A1227A0476D0035CB7E /* GroupMainVC.swift */,
+				052B537327B8FBF8004BEADE /* PersonAddVC.swift */,
+				052B537D27B8FC1F004BEADE /* PersonDatailVC.swift */,
 			);
 			path = DutchMoney;
 			sourceTree = "<group>";
@@ -466,7 +472,9 @@
 				059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */,
 				05BBB27727B4422B00C809DE /* FMDatabaseAdditions.m in Sources */,
 				053A0A0627A03D270035CB7E /* GroupAddVC.swift in Sources */,
+				052B537427B8FBF8004BEADE /* PersonAddVC.swift in Sources */,
 				053A0A1327A0476D0035CB7E /* GroupMainVC.swift in Sources */,
+				052B537E27B8FC1F004BEADE /* PersonDatailVC.swift in Sources */,
 				059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

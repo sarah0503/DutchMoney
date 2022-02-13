@@ -303,23 +303,24 @@
                     <navigationItem key="navigationItem" id="vyW-ps-1v6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ME9-S5-c2k">
                             <connections>
-                                <segue destination="Nks-iB-LYN" kind="push" id="vvg-8S-Vy5"/>
+                                <segue destination="Nks-iB-LYN" kind="push" identifier="PersonAddSegue" id="vvg-8S-Vy5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="groupLabel" destination="Ryp-oO-L9v" id="KWR-OH-9kF"/>
+                        <outlet property="tvListView" destination="bvN-dz-y5E" id="lrc-h6-UR8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7If-ke-fVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2816.9230769230767" y="1200.7109004739336"/>
         </scene>
-        <!--View Controller-->
+        <!--Person DatailVC-->
         <scene sceneID="e3X-vI-1Pa">
             <objects>
-                <viewController storyboardIdentifier="PersonDatilBoard" id="6f5-g4-WZ2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonDatilBoard" id="6f5-g4-WZ2" customClass="PersonDatailVC" customModule="DutchMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hmt-y3-m2Q">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,10 +332,10 @@
             </objects>
             <point key="canvasLocation" x="3702" y="1589"/>
         </scene>
-        <!--View Controller-->
+        <!--Person AddVC-->
         <scene sceneID="sds-yL-uER">
             <objects>
-                <viewController storyboardIdentifier="PersonAddCell" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nks-iB-LYN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonAddCell" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nks-iB-LYN" customClass="PersonAddVC" customModule="DutchMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VLW-EY-Ch8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,6 +357,9 @@
                                     <constraint firstAttribute="width" secondItem="j6s-f0-rSW" secondAttribute="height" multiplier="23:15" id="HGU-Sm-N3Z"/>
                                 </constraints>
                                 <state key="normal" title="완료"/>
+                                <connections>
+                                    <action selector="btnAddItem:" destination="Nks-iB-LYN" eventType="touchUpInside" id="yiA-gF-fVz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TZg-xx-WdW"/>
@@ -371,6 +375,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kHj-Cy-qnG"/>
+                    <connections>
+                        <outlet property="tfAddItem" destination="iTi-wA-DKV" id="85z-hh-URw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIm-R6-zvl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
