@@ -153,14 +153,14 @@
                                 <rect key="frame" x="40" y="184" width="310" height="422"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="groupCell" id="ikr-vA-npG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="groupCell" id="ikr-vA-npG" customClass="GroupCellTableViewCell" customModule="DutchMoney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="310" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ikr-vA-npG" id="cEO-hq-jj6">
                                             <rect key="frame" x="0.0" y="0.0" width="282.66666666666669" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laebl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pd0-QW-mZg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pd0-QW-mZg">
                                                     <rect key="frame" x="212.66666666666666" y="11.333333333333336" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -174,6 +174,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="groupMoneyLabel" destination="pd0-QW-mZg" id="2vR-OR-Kwo"/>
                                             <segue destination="wPX-Tc-zUJ" kind="modal" identifier="PersonSegue" id="zIz-LP-qeO"/>
                                         </connections>
                                     </tableViewCell>
@@ -202,7 +203,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="groupMoneyLabel" destination="pd0-QW-mZg" id="bSR-39-bJn"/>
                         <outlet property="tvListView" destination="EYp-E5-4al" id="YiP-i0-cwQ"/>
                     </connections>
                 </viewController>

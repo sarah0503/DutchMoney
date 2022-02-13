@@ -14,6 +14,7 @@
 		053A0A1327A0476D0035CB7E /* GroupMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A1227A0476D0035CB7E /* GroupMainVC.swift */; };
 		053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053D68DC2799ACDA004F2EE0 /* registVC.swift */; };
 		05855D4027987960002DB255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05855D3F27987960002DB255 /* GoogleService-Info.plist */; };
+		058622F327B94A05000DFD2E /* GroupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058622F227B94A05000DFD2E /* GroupCellTableViewCell.swift */; };
 		059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353CE2795E95F0021FFF6 /* AppDelegate.swift */; };
 		059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353D02795E95F0021FFF6 /* SceneDelegate.swift */; };
 		059353D32795E95F0021FFF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353D22795E95F0021FFF6 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		053A0A1227A0476D0035CB7E /* GroupMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMainVC.swift; sourceTree = "<group>"; };
 		053D68DC2799ACDA004F2EE0 /* registVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registVC.swift; sourceTree = "<group>"; };
 		05855D3F27987960002DB255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		058622F227B94A05000DFD2E /* GroupCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellTableViewCell.swift; sourceTree = "<group>"; };
 		059353CB2795E95F0021FFF6 /* DutchMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059353CE2795E95F0021FFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		059353D02795E95F0021FFF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				053A0A1227A0476D0035CB7E /* GroupMainVC.swift */,
 				052B537327B8FBF8004BEADE /* PersonAddVC.swift */,
 				052B537D27B8FC1F004BEADE /* PersonDatailVC.swift */,
+				058622F227B94A05000DFD2E /* GroupCellTableViewCell.swift */,
 			);
 			path = DutchMoney;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */,
 				05BBB27827B4422B00C809DE /* FMDatabase.m in Sources */,
 				059353D32795E95F0021FFF6 /* ViewController.swift in Sources */,
+				058622F327B94A05000DFD2E /* GroupCellTableViewCell.swift in Sources */,
 				05BBB27927B4422B00C809DE /* FMDatabasePool.m in Sources */,
 				05BBB27A27B4422B00C809DE /* FMResultSet.m in Sources */,
 				059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */,
