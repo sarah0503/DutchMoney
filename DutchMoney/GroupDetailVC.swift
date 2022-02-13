@@ -16,10 +16,12 @@ var receiveGroup = ""
 class GroupDetailVC: UIViewController {
 
     
-    
-    @IBOutlet var tvListView: UITableView!
+    @IBOutlet var personTvListView: UITableView!
     @IBOutlet var groupLabel: UILabel!
     override func viewDidLoad() {
+        
+        personTvListView.delegate = self
+        personTvListView.dataSource = self
         super.viewDidLoad()
         
         groupLabel.text = receiveGroup
@@ -41,7 +43,7 @@ class GroupDetailVC: UIViewController {
         }
             
             if myDB.open(){
-                let sql = "SELECT * FROM person_info;"
+                let sql = "SELECT * FROM person_info WHERE g_money = '\(receiveGroup)';"
                 let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
                 
                 if(result == nil){
@@ -64,7 +66,7 @@ class GroupDetailVC: UIViewController {
                 print("Error: \(myDB.lastErrorMessage())")
             }
         
-        tvListView.reloadData()
+        personTvListView.reloadData()
     }
     
     
@@ -116,7 +118,7 @@ extension GroupDetailVC : UITableViewDelegate, UITableViewDataSource{
 
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
         cell.textLabel?.text = PNames[indexPath.row]
         
 //        cell.GroupLabelName.text = items[indexPath.row]
@@ -144,7 +146,7 @@ extension GroupDetailVC : UITableViewDelegate, UITableViewDataSource{
             }
             
             if myDB.open(){
-                let sql = "SELECT * FROM person_info;"
+                let sql = "SELECT * FROM person_info  WHERE g_money = '\(receiveGroup)';"
                 let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
                 
                 if(result == nil){
@@ -167,7 +169,7 @@ extension GroupDetailVC : UITableViewDelegate, UITableViewDataSource{
                 print("Error: \(myDB.lastErrorMessage())")
             }
             
-            tvListView.reloadData()
+            personTvListView.reloadData()
             
             
         } else if editingStyle == .insert{

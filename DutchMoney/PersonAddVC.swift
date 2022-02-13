@@ -18,10 +18,8 @@ class PersonAddVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btnAddItem(_ sender: Any) {
-        
+    @IBAction func btnAddButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-        
         let filemgr = FileManager.default
         let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let databasePath = dirPaths.appendingPathComponent("DutchMoney.sqlite").path
@@ -29,10 +27,15 @@ class PersonAddVC: UIViewController {
         let myDB = FMDatabase (path:databasePath)
         
         if myDB.open(){
-            let insertSQL = "INSERT INTO person_info VALUES ('\(tfAddItem.text!)', 0,'\(receiveGroup)' ) ;"
+            let insertSQL = "INSERT INTO person_info VALUES ('\(tfAddItem.text!)', 0, '\(receiveGroup)');"
+            print(insertSQL)
             let result = myDB.executeUpdate(insertSQL, withArgumentsIn: [])
+        }else{
+            print("Tq")
         }
     }
+    
+    
     
 //    func receiveGruop(group : String){
 //        receiveGroup = group
