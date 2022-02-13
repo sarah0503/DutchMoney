@@ -159,6 +159,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ikr-vA-npG" id="cEO-hq-jj6">
                                             <rect key="frame" x="0.0" y="0.0" width="282.66666666666669" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laebl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pd0-QW-mZg">
+                                                    <rect key="frame" x="212.66666666666666" y="11.333333333333336" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pd0-QW-mZg" secondAttribute="trailing" constant="20" id="6tg-oF-ZrD"/>
+                                                <constraint firstItem="pd0-QW-mZg" firstAttribute="centerY" secondItem="cEO-hq-jj6" secondAttribute="centerY" id="IQF-QF-rKa"/>
+                                                <constraint firstItem="pd0-QW-mZg" firstAttribute="leading" secondItem="cEO-hq-jj6" secondAttribute="leading" constant="212.66666666666666" id="Plc-l2-3da"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="wPX-Tc-zUJ" kind="modal" identifier="PersonSegue" id="zIz-LP-qeO"/>
@@ -189,6 +202,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="groupMoneyLabel" destination="pd0-QW-mZg" id="bSR-39-bJn"/>
                         <outlet property="tvListView" destination="EYp-E5-4al" id="YiP-i0-cwQ"/>
                     </connections>
                 </viewController>

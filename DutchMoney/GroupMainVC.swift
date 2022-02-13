@@ -20,6 +20,7 @@ var db : OpaquePointer?
 class GroupMainVC: UIViewController {
    
     @IBOutlet var tvListView: UITableView!
+    @IBOutlet var groupMoneyLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -133,6 +134,7 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
         cell.textLabel?.text = GNames[indexPath.row]
+        groupMoneyLabel.text = GMoneys[indexPath.row] as! String
         
 //        cell.GroupLabelName.text = items[indexPath.row]
 

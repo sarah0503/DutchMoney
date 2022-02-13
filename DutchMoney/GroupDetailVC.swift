@@ -43,7 +43,7 @@ class GroupDetailVC: UIViewController {
         }
             
             if myDB.open(){
-                let sql = "SELECT * FROM person_info WHERE g_money = '\(receiveGroup)';"
+                let sql = "SELECT * FROM person_info WHERE g_name = '\(receiveGroup)';"
                 let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
                 
                 if(result == nil){
@@ -68,7 +68,39 @@ class GroupDetailVC: UIViewController {
         
         personTvListView.reloadData()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {let filemgr = FileManager.default
+        let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let databasePath = dirPaths.appendingPathComponent("DutchMoney.sqlite").path
+        
+        //if filemgr.fileExists(atPath: databasePath) == false{
+            
+        let myDB = FMDatabase(path: databasePath as String)
+        if myDB.open(){
+            let sql = "SELECT * FROM person_info;"
+            let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
+            
+            if(result == nil){
+                print("Error: \(myDB.lastErrorMessage())")
+            }else{
+                var pName = ""
+                var pMoney : Int32
+                PNames.removeAll()
+                PMoneys.removeAll()
+                
+                while(result?.next() == true){
+                    pName = (result?.string(forColumn: "p_name"))!
+                    pMoney = (result?.int(forColumn: "p_money"))!
+                    
+                    PNames.append(pName)
+                    PMoneys.append(pMoney)
+                }
+            }
+        }else{
+            print("Error: \(myDB.lastErrorMessage())")
+        }
+        
+        personTvListView.reloadData()
+    }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "PersonAddSegue"{
@@ -102,6 +134,8 @@ class GroupDetailVC: UIViewController {
     */
 
 }
+
+
 
 extension GroupDetailVC : UITableViewDelegate, UITableViewDataSource{
 
@@ -146,7 +180,7 @@ extension GroupDetailVC : UITableViewDelegate, UITableViewDataSource{
             }
             
             if myDB.open(){
-                let sql = "SELECT * FROM person_info  WHERE g_money = '\(receiveGroup)';"
+                let sql = "SELECT * FROM person_info  WHERE g_name = '\(receiveGroup)';"
                 let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
                 
                 if(result == nil){

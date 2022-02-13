@@ -28,7 +28,6 @@ class PersonAddVC: UIViewController {
         
         if myDB.open(){
             let insertSQL = "INSERT INTO person_info VALUES ('\(tfAddItem.text!)', 0, '\(receiveGroup)');"
-            print(insertSQL)
             let result = myDB.executeUpdate(insertSQL, withArgumentsIn: [])
         }else{
             print("Tq")
