@@ -131,20 +131,20 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
 
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
-        cell.textLabel?.text = GNames[indexPath.row]
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
+       // cell.textLabel?.text = GNames[indexPath.row]
         
-        let groupcell = tvListView.dequeueReusableCell(withIdentifier : "groupCell", for : indexPath) as! GroupCellTableViewCell
-        print(GMoneys[indexPath.row])
+        let groupcell = tableView.dequeueReusableCell(withIdentifier : "groupCell", for : indexPath) as! GroupCellTableViewCell
+    
+        groupcell.textLabel?.text = GNames[indexPath.row]
         groupcell.groupMoneyLabel.text = NSString(format:"%2X",GMoneys[indexPath.row]) as String
-        
         //GroupCellTableViewCell.groupMonegyLabel = GMoneys[indexPath.row] as! String
         
 //        cell.GroupLabelName.text = items[indexPath.row]
 
         // Configure the cell...
 
-        return cell
+        return groupcell
     }
     
     internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
