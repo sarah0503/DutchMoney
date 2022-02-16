@@ -13,7 +13,6 @@
 		053A0A0B27A03D420035CB7E /* GroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */; };
 		053A0A1327A0476D0035CB7E /* GroupMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A1227A0476D0035CB7E /* GroupMainVC.swift */; };
 		053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053D68DC2799ACDA004F2EE0 /* registVC.swift */; };
-		05855D4027987960002DB255 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05855D3F27987960002DB255 /* GoogleService-Info.plist */; };
 		058622F327B94A05000DFD2E /* GroupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058622F227B94A05000DFD2E /* GroupCellTableViewCell.swift */; };
 		059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353CE2795E95F0021FFF6 /* AppDelegate.swift */; };
 		059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353D02795E95F0021FFF6 /* SceneDelegate.swift */; };
@@ -23,6 +22,7 @@
 		059353DB2795E9680021FFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059353D92795E9680021FFF6 /* LaunchScreen.storyboard */; };
 		059353E62795E9680021FFF6 /* DutchMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353E52795E9680021FFF6 /* DutchMoneyTests.swift */; };
 		059353F12795E9680021FFF6 /* DutchMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353F02795E9680021FFF6 /* DutchMoneyUITests.swift */; };
+		05A9E16F27BD729A00A27865 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05A9E16E27BD729A00A27865 /* GoogleService-Info.plist */; };
 		05BBB26627B4419800C809DE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BBB26527B4419800C809DE /* libsqlite3.tbd */; };
 		05BBB27627B4422B00C809DE /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB26D27B4422A00C809DE /* FMDatabaseQueue.m */; };
 		05BBB27727B4422B00C809DE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB26F27B4422A00C809DE /* FMDatabaseAdditions.m */; };
@@ -58,7 +58,6 @@
 		053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailVC.swift; sourceTree = "<group>"; };
 		053A0A1227A0476D0035CB7E /* GroupMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMainVC.swift; sourceTree = "<group>"; };
 		053D68DC2799ACDA004F2EE0 /* registVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registVC.swift; sourceTree = "<group>"; };
-		05855D3F27987960002DB255 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		058622F227B94A05000DFD2E /* GroupCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellTableViewCell.swift; sourceTree = "<group>"; };
 		059353CB2795E95F0021FFF6 /* DutchMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059353CE2795E95F0021FFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		059353EC2795E9680021FFF6 /* DutchMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DutchMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		059353F02795E9680021FFF6 /* DutchMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutchMoneyUITests.swift; sourceTree = "<group>"; };
 		059353F22795E9680021FFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A9E16E27BD729A00A27865 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05BBB26527B4419800C809DE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		05BBB26A27B4422900C809DE /* DutchMoney-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DutchMoney-Bridging-Header.h"; sourceTree = "<group>"; };
 		05BBB26B27B4422A00C809DE /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabasePool.h"; sourceTree = "<group>"; };
@@ -87,15 +87,15 @@
 		05BBB27327B4422B00C809DE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabaseAdditions.h"; sourceTree = "<group>"; };
 		05BBB27427B4422B00C809DE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMResultSet.h"; sourceTree = "<group>"; };
 		05BBB27527B4422B00C809DE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMResultSet.m"; sourceTree = "<group>"; };
+		07BF1E37B1478B32BA95D659 /* Pods-DutchMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoney.debug.xcconfig"; path = "Target Support Files/Pods-DutchMoney/Pods-DutchMoney.debug.xcconfig"; sourceTree = "<group>"; };
 		305D7D3228F789487E85531B /* Pods_DutchMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DutchMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39D3A647C10EB9838C59A6BE /* Pods-DutchMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoneyTests.release.xcconfig"; path = "Target Support Files/Pods-DutchMoneyTests/Pods-DutchMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
 		472471437ECFEEA03D3A3B60 /* Pods_DutchMoney_DutchMoneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DutchMoney_DutchMoneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6524BFB95B4DEB3E18CF16 /* Pods_DutchMoneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DutchMoneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65ED8E998E1AF0DFBA27ED51 /* Pods-DutchMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoney.release.xcconfig"; path = "Target Support Files/Pods-DutchMoney/Pods-DutchMoney.release.xcconfig"; sourceTree = "<group>"; };
-		A2BC715B00E7008548128224 /* Pods-DutchMoneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoneyTests.debug.xcconfig"; path = "Target Support Files/Pods-DutchMoneyTests/Pods-DutchMoneyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A69953AE850A453473DB3B6D /* Pods-DutchMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoneyTests.release.xcconfig"; path = "Target Support Files/Pods-DutchMoneyTests/Pods-DutchMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
-		AC19613564819C71E93D7527 /* Pods-DutchMoney-DutchMoneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoney-DutchMoneyUITests.release.xcconfig"; path = "Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E8B9814A12484075066F509F /* Pods-DutchMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoney.debug.xcconfig"; path = "Target Support Files/Pods-DutchMoney/Pods-DutchMoney.debug.xcconfig"; sourceTree = "<group>"; };
-		EE7FC579C59B0C4CE158E55D /* Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA296528E2145A86BE8309A8 /* Pods-DutchMoney-DutchMoneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoney-DutchMoneyUITests.release.xcconfig"; path = "Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B6EA00044E46C6D577A634CE /* Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EEC14224ABE7464DAFD8951F /* Pods-DutchMoneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoneyTests.debug.xcconfig"; path = "Target Support Files/Pods-DutchMoneyTests/Pods-DutchMoneyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC60FE7BFB5A0D46DA9A5E34 /* Pods-DutchMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoney.release.xcconfig"; path = "Target Support Files/Pods-DutchMoney/Pods-DutchMoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,9 +145,9 @@
 				059353E42795E9680021FFF6 /* DutchMoneyTests */,
 				059353EF2795E9680021FFF6 /* DutchMoneyUITests */,
 				059353CC2795E95F0021FFF6 /* Products */,
-				7E8EADB6B77ECE146EC5394D /* Pods */,
 				506747A0D54DB7C5500C79E4 /* Frameworks */,
 				05BBB26A27B4422900C809DE /* DutchMoney-Bridging-Header.h */,
+				DC924A8D3E0F347F5321471F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,7 +164,7 @@
 		059353CD2795E95F0021FFF6 /* DutchMoney */ = {
 			isa = PBXGroup;
 			children = (
-				05855D3F27987960002DB255 /* GoogleService-Info.plist */,
+				05A9E16E27BD729A00A27865 /* GoogleService-Info.plist */,
 				059353CE2795E95F0021FFF6 /* AppDelegate.swift */,
 				059353D02795E95F0021FFF6 /* SceneDelegate.swift */,
 				059353D22795E95F0021FFF6 /* ViewController.swift */,
@@ -212,15 +212,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7E8EADB6B77ECE146EC5394D /* Pods */ = {
+		DC924A8D3E0F347F5321471F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E8B9814A12484075066F509F /* Pods-DutchMoney.debug.xcconfig */,
-				65ED8E998E1AF0DFBA27ED51 /* Pods-DutchMoney.release.xcconfig */,
-				EE7FC579C59B0C4CE158E55D /* Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig */,
-				AC19613564819C71E93D7527 /* Pods-DutchMoney-DutchMoneyUITests.release.xcconfig */,
-				A2BC715B00E7008548128224 /* Pods-DutchMoneyTests.debug.xcconfig */,
-				A69953AE850A453473DB3B6D /* Pods-DutchMoneyTests.release.xcconfig */,
+				07BF1E37B1478B32BA95D659 /* Pods-DutchMoney.debug.xcconfig */,
+				FC60FE7BFB5A0D46DA9A5E34 /* Pods-DutchMoney.release.xcconfig */,
+				B6EA00044E46C6D577A634CE /* Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig */,
+				AA296528E2145A86BE8309A8 /* Pods-DutchMoney-DutchMoneyUITests.release.xcconfig */,
+				EEC14224ABE7464DAFD8951F /* Pods-DutchMoneyTests.debug.xcconfig */,
+				39D3A647C10EB9838C59A6BE /* Pods-DutchMoneyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 				059353C72795E95F0021FFF6 /* Sources */,
 				059353C82795E95F0021FFF6 /* Frameworks */,
 				059353C92795E95F0021FFF6 /* Resources */,
-				7777F5D1D4319780030436F2 /* [CP] Embed Pods Frameworks */,
+				26589B69A4336329AB1005BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,7 +274,7 @@
 				059353E82795E9680021FFF6 /* Sources */,
 				059353E92795E9680021FFF6 /* Frameworks */,
 				059353EA2795E9680021FFF6 /* Resources */,
-				DED6A994A6F864F47C5A5659 /* [CP] Embed Pods Frameworks */,
+				213C5926572E5A08301B06D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,7 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				059353DB2795E9680021FFF6 /* LaunchScreen.storyboard in Resources */,
-				05855D4027987960002DB255 /* GoogleService-Info.plist in Resources */,
+				05A9E16F27BD729A00A27865 /* GoogleService-Info.plist in Resources */,
 				059353D82795E9680021FFF6 /* Assets.xcassets in Resources */,
 				059353D62795E95F0021FFF6 /* Main.storyboard in Resources */,
 			);
@@ -358,7 +358,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7777F5D1D4319780030436F2 /* [CP] Embed Pods Frameworks */ = {
+		213C5926572E5A08301B06D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26589B69A4336329AB1005BE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -439,23 +456,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DED6A994A6F864F47C5A5659 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DutchMoney-DutchMoneyUITests/Pods-DutchMoney-DutchMoneyUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -652,7 +652,7 @@
 		};
 		059353F62795E9680021FFF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8B9814A12484075066F509F /* Pods-DutchMoney.debug.xcconfig */;
+			baseConfigurationReference = 07BF1E37B1478B32BA95D659 /* Pods-DutchMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -674,7 +674,7 @@
 		};
 		059353F72795E9680021FFF6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65ED8E998E1AF0DFBA27ED51 /* Pods-DutchMoney.release.xcconfig */;
+			baseConfigurationReference = FC60FE7BFB5A0D46DA9A5E34 /* Pods-DutchMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -695,7 +695,7 @@
 		};
 		059353F92795E9680021FFF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2BC715B00E7008548128224 /* Pods-DutchMoneyTests.debug.xcconfig */;
+			baseConfigurationReference = EEC14224ABE7464DAFD8951F /* Pods-DutchMoneyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -717,7 +717,7 @@
 		};
 		059353FA2795E9680021FFF6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A69953AE850A453473DB3B6D /* Pods-DutchMoneyTests.release.xcconfig */;
+			baseConfigurationReference = 39D3A647C10EB9838C59A6BE /* Pods-DutchMoneyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -739,7 +739,7 @@
 		};
 		059353FC2795E9680021FFF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE7FC579C59B0C4CE158E55D /* Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig */;
+			baseConfigurationReference = B6EA00044E46C6D577A634CE /* Pods-DutchMoney-DutchMoneyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -759,7 +759,7 @@
 		};
 		059353FD2795E9680021FFF6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC19613564819C71E93D7527 /* Pods-DutchMoney-DutchMoneyUITests.release.xcconfig */;
+			baseConfigurationReference = AA296528E2145A86BE8309A8 /* Pods-DutchMoney-DutchMoneyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 import Firebase
 
 class registVC: UIViewController {
