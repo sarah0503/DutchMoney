@@ -43,7 +43,10 @@ class GroupDetailVC: UIViewController {
         }
             
             if myDB.open(){
+                PNames.removeAll()
+                PMoneys.removeAll()
                 let sql = "SELECT * FROM person_info WHERE g_name = '\(receiveGroup)';"
+                print(receiveGroup)
                 let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
                 
                 if(result == nil){
@@ -76,7 +79,9 @@ class GroupDetailVC: UIViewController {
             
         let myDB = FMDatabase(path: databasePath as String)
         if myDB.open(){
-            let sql = "SELECT * FROM person_info;"
+            PNames.removeAll()
+            PMoneys.removeAll()
+            let sql = "SELECT * FROM person_info WHERE g_name = '\(receiveGroup)';"
             let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
             
             if(result == nil){
@@ -180,6 +185,8 @@ extension GroupDetailVC : UITableViewDelegate, UITableViewDataSource{
             }
             
             if myDB.open(){
+                PNames.removeAll()
+                PMoneys.removeAll()
                 let sql = "SELECT * FROM person_info  WHERE g_name = '\(receiveGroup)';"
                 let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
                 
