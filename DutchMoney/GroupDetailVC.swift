@@ -157,14 +157,18 @@ extension GroupDetailVC : UITableViewDelegate, UITableViewDataSource{
 
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
-        cell.textLabel?.text = PNames[indexPath.row]
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
+//        cell.textLabel?.text = PNames[indexPath.row]
+        let personcell = tableView.dequeueReusableCell(withIdentifier: "personCell", for : indexPath) as! PersonTableViewCell
+        
+        personcell.textLabel?.text = PNames[indexPath.row]
+        personcell.personMoneyLabel.text = NSString(format:"%2X",PMoneys[indexPath.row]) as String
         
 //        cell.GroupLabelName.text = items[indexPath.row]
 
         // Configure the cell...
 
-        return cell
+        return personcell
     }
     
     internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){

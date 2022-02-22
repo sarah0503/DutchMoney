@@ -13,6 +13,7 @@
 		053A0A0B27A03D420035CB7E /* GroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */; };
 		053A0A1327A0476D0035CB7E /* GroupMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A0A1227A0476D0035CB7E /* GroupMainVC.swift */; };
 		053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053D68DC2799ACDA004F2EE0 /* registVC.swift */; };
+		057E751327C54E8100ABD15A /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057E751227C54E8100ABD15A /* PersonTableViewCell.swift */; };
 		058622F327B94A05000DFD2E /* GroupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058622F227B94A05000DFD2E /* GroupCellTableViewCell.swift */; };
 		059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353CE2795E95F0021FFF6 /* AppDelegate.swift */; };
 		059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353D02795E95F0021FFF6 /* SceneDelegate.swift */; };
@@ -58,6 +59,7 @@
 		053A0A0A27A03D420035CB7E /* GroupDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailVC.swift; sourceTree = "<group>"; };
 		053A0A1227A0476D0035CB7E /* GroupMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMainVC.swift; sourceTree = "<group>"; };
 		053D68DC2799ACDA004F2EE0 /* registVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registVC.swift; sourceTree = "<group>"; };
+		057E751227C54E8100ABD15A /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		058622F227B94A05000DFD2E /* GroupCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellTableViewCell.swift; sourceTree = "<group>"; };
 		059353CB2795E95F0021FFF6 /* DutchMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059353CE2795E95F0021FFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				052B537327B8FBF8004BEADE /* PersonAddVC.swift */,
 				052B537D27B8FC1F004BEADE /* PersonDatailVC.swift */,
 				058622F227B94A05000DFD2E /* GroupCellTableViewCell.swift */,
+				057E751227C54E8100ABD15A /* PersonTableViewCell.swift */,
 			);
 			path = DutchMoney;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				052B537427B8FBF8004BEADE /* PersonAddVC.swift in Sources */,
 				053A0A1327A0476D0035CB7E /* GroupMainVC.swift in Sources */,
 				052B537E27B8FC1F004BEADE /* PersonDatailVC.swift in Sources */,
+				057E751327C54E8100ABD15A /* PersonTableViewCell.swift in Sources */,
 				059353D12795E95F0021FFF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
