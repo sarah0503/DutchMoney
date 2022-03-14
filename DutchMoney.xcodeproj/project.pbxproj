@@ -23,6 +23,8 @@
 		059353DB2795E9680021FFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059353D92795E9680021FFF6 /* LaunchScreen.storyboard */; };
 		059353E62795E9680021FFF6 /* DutchMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353E52795E9680021FFF6 /* DutchMoneyTests.swift */; };
 		059353F12795E9680021FFF6 /* DutchMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059353F02795E9680021FFF6 /* DutchMoneyUITests.swift */; };
+		05A5918127DEF4F700BF2157 /* MoneyAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A5918027DEF4F700BF2157 /* MoneyAddVC.swift */; };
+		05A5918327DEF88700BF2157 /* MoneyAddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A5918227DEF88700BF2157 /* MoneyAddTableViewCell.swift */; };
 		05A9E16F27BD729A00A27865 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05A9E16E27BD729A00A27865 /* GoogleService-Info.plist */; };
 		05BBB26627B4419800C809DE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BBB26527B4419800C809DE /* libsqlite3.tbd */; };
 		05BBB27627B4422B00C809DE /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB26D27B4422A00C809DE /* FMDatabaseQueue.m */; };
@@ -75,6 +77,8 @@
 		059353EC2795E9680021FFF6 /* DutchMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DutchMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		059353F02795E9680021FFF6 /* DutchMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutchMoneyUITests.swift; sourceTree = "<group>"; };
 		059353F22795E9680021FFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A5918027DEF4F700BF2157 /* MoneyAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAddVC.swift; sourceTree = "<group>"; };
+		05A5918227DEF88700BF2157 /* MoneyAddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAddTableViewCell.swift; sourceTree = "<group>"; };
 		05A9E16E27BD729A00A27865 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05BBB26527B4419800C809DE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		05BBB26A27B4422900C809DE /* DutchMoney-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DutchMoney-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				052B537D27B8FC1F004BEADE /* PersonDatailVC.swift */,
 				058622F227B94A05000DFD2E /* GroupCellTableViewCell.swift */,
 				057E751227C54E8100ABD15A /* PersonTableViewCell.swift */,
+				05A5918027DEF4F700BF2157 /* MoneyAddVC.swift */,
+				05A5918227DEF88700BF2157 /* MoneyAddTableViewCell.swift */,
 			);
 			path = DutchMoney;
 			sourceTree = "<group>";
@@ -472,9 +478,11 @@
 				05BBB27627B4422B00C809DE /* FMDatabaseQueue.m in Sources */,
 				053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */,
 				05BBB27827B4422B00C809DE /* FMDatabase.m in Sources */,
+				05A5918127DEF4F700BF2157 /* MoneyAddVC.swift in Sources */,
 				059353D32795E95F0021FFF6 /* ViewController.swift in Sources */,
 				058622F327B94A05000DFD2E /* GroupCellTableViewCell.swift in Sources */,
 				05BBB27927B4422B00C809DE /* FMDatabasePool.m in Sources */,
+				05A5918327DEF88700BF2157 /* MoneyAddTableViewCell.swift in Sources */,
 				05BBB27A27B4422B00C809DE /* FMResultSet.m in Sources */,
 				059353CF2795E95F0021FFF6 /* AppDelegate.swift in Sources */,
 				05BBB27727B4422B00C809DE /* FMDatabaseAdditions.m in Sources */,
