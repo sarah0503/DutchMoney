@@ -104,7 +104,6 @@ class GroupDetailVC: UIViewController {
             print("Error: \(myDB.lastErrorMessage())")
         }
         
-        personTvListView.reloadData()
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -162,7 +161,7 @@ extension GroupDetailVC : UITableViewDelegate, UITableViewDataSource{
         let personcell = tableView.dequeueReusableCell(withIdentifier: "personCell", for : indexPath) as! PersonTableViewCell
         
         personcell.textLabel?.text = PNames[indexPath.row]
-        personcell.personMoneyLabel.text = NSString(format:"%2X",PMoneys[indexPath.row]) as String
+        personcell.personMoneyLabel.text = NSString(format:"%d",PMoneys[indexPath.row]) as String
         
 //        cell.GroupLabelName.text = items[indexPath.row]
 

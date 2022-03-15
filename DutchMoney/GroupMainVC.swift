@@ -67,6 +67,7 @@ class GroupMainVC: UIViewController {
             }else{
                 print("Error: \(myDB.lastErrorMessage())")
             }
+        tvListView.reloadData()
         //}
     }
     
@@ -137,7 +138,7 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
         let groupcell = tableView.dequeueReusableCell(withIdentifier : "groupCell", for : indexPath) as! GroupCellTableViewCell
     
         groupcell.textLabel?.text = GNames[indexPath.row]
-        groupcell.groupMoneyLabel.text = NSString(format:"%2X",GMoneys[indexPath.row]) as String
+        groupcell.groupMoneyLabel.text = NSString(format:"%d",GMoneys[indexPath.row]) as String
         //GroupCellTableViewCell.groupMonegyLabel = GMoneys[indexPath.row] as! String
         
 //        cell.GroupLabelName.text = items[indexPath.row]
@@ -206,7 +207,7 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
             let nav = segue.destination as! UINavigationController
             let detailView = nav.topViewController as! GroupDetailVC
             detailView.receiveGruop(group: GNames[(indexPath?.row)!])
-           
+            tvListView.reloadData()
         }
     }
     

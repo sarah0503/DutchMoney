@@ -49,6 +49,7 @@ class MoneyAddVC: UIViewController {
              let groupUpdateResult = myDB.executeUpdate(groupUpdateSQL, withArgumentsIn: [])
         }else{
         }
+        
     }
     override func viewDidLoad() {
         personMoneyTvListView.delegate = self

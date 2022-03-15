@@ -176,7 +176,10 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="groupMoneyLabel" destination="pd0-QW-mZg" id="2vR-OR-Kwo"/>
-                                            <segue destination="wPX-Tc-zUJ" kind="modal" identifier="PersonSegue" id="zIz-LP-qeO"/>
+                                            <segue destination="wPX-Tc-zUJ" kind="modal" identifier="PersonSegue" id="zIz-LP-qeO">
+                                                <segue key="commit" inheritsFrom="parent" id="3ny-Zj-K2w"/>
+                                                <segue key="preview" inheritsFrom="commit" id="sNz-Sp-dhi"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -723,6 +726,9 @@
             <point key="canvasLocation" x="2993.8461538461538" y="1935.7819905213269"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zIz-LP-qeO"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.rectangle" catalog="system" width="128" height="93"/>
         <image name="checkmark.rectangle.fill" catalog="system" width="128" height="93"/>
