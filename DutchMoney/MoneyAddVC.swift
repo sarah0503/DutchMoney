@@ -23,16 +23,30 @@ class MoneyAddVC: UIViewController {
         
         //DB생성
         if myDB.open(){
-            let sql_stmt = "CREATE TABLE IF NOT EXISTS money_list ( m_name TEXT, money INTEGER, g_name  TEXT, FOREIGN KEY(g_name) REFERENCES group_info(g_name)"
+            let sql_stmt = "CREATE TABLE IF NOT EXISTS money_list ( m_name TEXT, money INTEGER, g_name  TEXT, FOREIGN KEY(g_name) REFERENCES group_info(g_name))"
             if !myDB.executeStatements(sql_stmt){
             }
         }
         //DB추가
         if myDB.open(){
             //let insertSQL = "INSERT INTO person_info VALUES ('\(tfAddItem.text!)', 0, '\(receiveGroup)');"
-            let money = Int(moneyTf.text!)
-            let insertSQL = "INSERT INTO money_info VALUES ('\(moneyNameTf.text!)', '\(money)', '\(receiveGroup)')"
+            //let money:Int? = Int(moneyTf.text!)
+            let money = ( (moneyTf.text!) as NSString).integerValue
+            print(money)
+            let insertSQL = "INSERT INTO money_list VALUES ('\(moneyNameTf.text!)', '\(money)', '\(receiveGroup)')"
             let result = myDB.executeUpdate(insertSQL, withArgumentsIn: [])
+        //GroupDB에서 금액 가져오기
+//            let moneySQL = "SELECT g_money FROM group_info WHERE g_name = '\(receiveGroup)'"
+//            let moneyResult:FMResultSet? = myDB.executeQuery(moneySQL, withParameterDictionary : nil)
+//            let groupMoney = Int(moneyResult?.int(forColumn: "g_money") ?? <#default value#>)
+//            let updatedMoney = groupMoney + money
+//
+//            print(groupMoney)
+            
+        //GroupDB에 금액 수정
+            let groupUpdateSQL = "UPDATE group_info SET g_money = g_money + \(money) WHERE g_name = '\(receiveGroup)'"
+            
+             let groupUpdateResult = myDB.executeUpdate(groupUpdateSQL, withArgumentsIn: [])
         }else{
         }
     }
@@ -47,11 +61,6 @@ class MoneyAddVC: UIViewController {
             
         let myDB = FMDatabase(path: databasePath as String)
         
-        if myDB.open(){
-            let sql_stmt = "CREATE TABLE IF NOT EXISTS person_info ( p_name TEXT NOT NULL, p_money INTEGER DEFAULT 0, g_name TEXT, PRIMARY KEY(p_name,g_name), FOREIGN KEY(g_name) REFERENCES group_info(g_name) ) "
-            if !myDB.executeStatements(sql_stmt){
-            }
-        }
             if myDB == nil{
             print("Error: \(myDB.lastErrorMessage())")
         }
