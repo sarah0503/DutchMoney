@@ -32,6 +32,8 @@
 		05BBB27827B4422B00C809DE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB27127B4422A00C809DE /* FMDatabase.m */; };
 		05BBB27927B4422B00C809DE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB27227B4422A00C809DE /* FMDatabasePool.m */; };
 		05BBB27A27B4422B00C809DE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BBB27527B4422B00C809DE /* FMResultSet.m */; };
+		05DFF18B27E2139C00D79E5A /* MoneyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DFF18A27E2139C00D79E5A /* MoneyListVC.swift */; };
+		05DFF18D27E2148400D79E5A /* MoneyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DFF18C27E2148400D79E5A /* MoneyListTableViewCell.swift */; };
 		138814FF8E8C9E9523D81ED0 /* Pods_DutchMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D7D3228F789487E85531B /* Pods_DutchMoney.framework */; };
 		29358DCE1C92A6DB8CA1F6BF /* Pods_DutchMoney_DutchMoneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472471437ECFEEA03D3A3B60 /* Pods_DutchMoney_DutchMoneyUITests.framework */; };
 		97B1DF3021A7AB8F2F7F5BD5 /* Pods_DutchMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6524BFB95B4DEB3E18CF16 /* Pods_DutchMoneyTests.framework */; };
@@ -93,6 +95,8 @@
 		05BBB27327B4422B00C809DE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMDatabaseAdditions.h"; sourceTree = "<group>"; };
 		05BBB27427B4422B00C809DE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMResultSet.h"; sourceTree = "<group>"; };
 		05BBB27527B4422B00C809DE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../../Downloads/fmdb-2.7.7/src/fmdb/FMResultSet.m"; sourceTree = "<group>"; };
+		05DFF18A27E2139C00D79E5A /* MoneyListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyListVC.swift; sourceTree = "<group>"; };
+		05DFF18C27E2148400D79E5A /* MoneyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyListTableViewCell.swift; sourceTree = "<group>"; };
 		07BF1E37B1478B32BA95D659 /* Pods-DutchMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoney.debug.xcconfig"; path = "Target Support Files/Pods-DutchMoney/Pods-DutchMoney.debug.xcconfig"; sourceTree = "<group>"; };
 		305D7D3228F789487E85531B /* Pods_DutchMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DutchMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D3A647C10EB9838C59A6BE /* Pods-DutchMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DutchMoneyTests.release.xcconfig"; path = "Target Support Files/Pods-DutchMoneyTests/Pods-DutchMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				057E751227C54E8100ABD15A /* PersonTableViewCell.swift */,
 				05A5918027DEF4F700BF2157 /* MoneyAddVC.swift */,
 				05A5918227DEF88700BF2157 /* MoneyAddTableViewCell.swift */,
+				05DFF18A27E2139C00D79E5A /* MoneyListVC.swift */,
+				05DFF18C27E2148400D79E5A /* MoneyListTableViewCell.swift */,
 			);
 			path = DutchMoney;
 			sourceTree = "<group>";
@@ -475,10 +481,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				053A0A0B27A03D420035CB7E /* GroupDetailVC.swift in Sources */,
+				05DFF18B27E2139C00D79E5A /* MoneyListVC.swift in Sources */,
 				05BBB27627B4422B00C809DE /* FMDatabaseQueue.m in Sources */,
 				053D68DD2799ACDA004F2EE0 /* registVC.swift in Sources */,
 				05BBB27827B4422B00C809DE /* FMDatabase.m in Sources */,
 				05A5918127DEF4F700BF2157 /* MoneyAddVC.swift in Sources */,
+				05DFF18D27E2148400D79E5A /* MoneyListTableViewCell.swift in Sources */,
 				059353D32795E95F0021FFF6 /* ViewController.swift in Sources */,
 				058622F327B94A05000DFD2E /* GroupCellTableViewCell.swift in Sources */,
 				05BBB27927B4422B00C809DE /* FMDatabasePool.m in Sources */,

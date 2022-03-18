@@ -27,8 +27,6 @@ class GroupMainVC: UIViewController {
         tvListView.dataSource = self
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
         let filemgr = FileManager.default
         let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let databasePath = dirPaths.appendingPathComponent("DutchMoney.sqlite").path
@@ -114,6 +112,12 @@ class GroupMainVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+//    override func viewWillDisappear(_ animated: Bool) {
+//
+//
+//        NotificationCenter.default.removeObserver(self)
+//    }
 
 }
 
@@ -211,8 +215,20 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
         }
     }
     
+    /*****************************************/
+    func reloadTable(){
+        super.viewDidLoad()
+    }
     
-    
+    class reloadtable{
+        func GroupReloadTable(){
+            
+            let VC = GroupMainVC()
+            VC.tvListView.reloadData()
+        }
+        
+    }
+    /*****************************************/
     
 //    private func tableView(tableView : UITableView, cellForRowAtIndexPath indexPath : NSIndexPath) -> UITableViewCell{
 //        //let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell")

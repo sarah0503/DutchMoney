@@ -546,10 +546,10 @@
             </objects>
             <point key="canvasLocation" x="1887.6923076923076" y="1200.7109004739336"/>
         </scene>
-        <!--View Controller-->
+        <!--Money ListVC-->
         <scene sceneID="JyI-9r-Zdq">
             <objects>
-                <viewController id="4Li-Ha-tku" sceneMemberID="viewController">
+                <viewController id="4Li-Ha-tku" customClass="MoneyListVC" customModule="DutchMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ws-dn-ye8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -558,29 +558,15 @@
                                 <rect key="frame" x="40" y="116" width="310" height="565"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="m2V-zd-Xa9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="moneyListCell" id="m2V-zd-Xa9" customClass="MoneyListTableViewCell" customModule="DutchMoney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="310" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m2V-zd-Xa9" id="VmI-a8-0SP">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m2V-zd-Xa9" id="VmI-a8-0SP" customClass="MoneyListTableViewCell" customModule="DutchMoney" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="310" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juZ-t9-TdE">
-                                                    <rect key="frame" x="16" y="11" width="30" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWG-Lt-Vfb">
-                                                    <rect key="frame" x="252" y="11" width="30" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DE-Zg-jEj">
-                                                    <rect key="frame" x="140" y="11" width="30" height="21"/>
+                                                    <rect key="frame" x="264" y="11.333333333333336" width="30" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -588,6 +574,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="momeyMomeyLabel" destination="yWG-Lt-Vfb" id="fa2-5J-LSs"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -602,10 +591,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ai-hv-tWJ"/>
+                    <connections>
+                        <outlet property="tvMoneyList" destination="aq1-7f-EHX" id="HSa-ju-ixa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKt-Mi-yje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2149" y="1937"/>
+            <point key="canvasLocation" x="2147.6923076923076" y="1936.4928909952605"/>
         </scene>
         <!--Money AddVC-->
         <scene sceneID="DSY-eC-oE6">
