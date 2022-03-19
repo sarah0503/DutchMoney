@@ -22,30 +22,32 @@ class MoneyAddVC: UIViewController {
         
         //DB생성
         if myDB.open(){
-            let sql_stmt = "CREATE TABLE IF NOT EXISTS money_list ( m_name TEXT, money INTEGER, g_name  TEXT, FOREIGN KEY(g_name) REFERENCES group_info(g_name)"
+            let sql_stmt = "CREATE TABLE IF NOT EXISTS money_list ( m_name TEXT, money INTEGER, g_name  TEXT, m_id INTEGER, FOREIGN KEY(g_name) REFERENCES group_info(g_name), PRIMARY KEY (m_id))"
             if !myDB.executeStatements(sql_stmt){
             }
-        }
+            let gpmSQL = "CREATE TABLE IF NOT EXISTS gpm_table ( group_name TEXT, person_name TEXT, m_id INTEGER)"
+            myDB.executeStatements(gpmSQL)
         //DB추가
         if myDB.open(){
                   //let insertSQL = "INSERT INTO person_info VALUES ('\(tfAddItem.text!)', 0, '\(receiveGroup)');"
                   //let money:Int? = Int(moneyTf.text!)
                   let money = ( (moneyTf.text!) as NSString).integerValue
-                  print(money)
-                  let insertSQL = "INSERT INTO money_list VALUES ('\(moneyNameTf.text!)', '\(money)', '\(receiveGroup)')"
+                  let money_idSQL = "SELECT group_count FROM group_info WHERE g_name = '\(receiveGroup)'"
+            let money_id:FMResultSet? = myDB.executeQuery(money_idSQL, withParameterDictionary : nil)
+                  let insertSQL = "INSERT INTO money_list VALUES ('\(moneyNameTf.text!)', '\(money)', '\(receiveGroup)', '\(money_id)')"
                   let result = myDB.executeUpdate(insertSQL, withArgumentsIn: [])
-              //GroupDB에서 금액 가져오기
-      //            let moneySQL = "SELECT g_money FROM group_info WHERE g_name = '\(receiveGroup)'"
-      //            let moneyResult:FMResultSet? = myDB.executeQuery(moneySQL, withParameterDictionary : nil)
-      //            let groupMoney = Int(moneyResult?.int(forColumn: "g_money") ?? <#default value#>)
-      //            let updatedMoney = groupMoney + money
-      //
-      //            print(groupMoney)
+            
+                /***************gpm_tabel에 넣기*************/
+            //사람이름 몽땅 가져오기
+           // gpmInsertSQL = "INSERT INTO gpm_table VALUES( '"
                   
               //GroupDB에 금액 수정
                   let groupUpdateSQL = "UPDATE group_info SET g_money = g_money + \(money) WHERE g_name = '\(receiveGroup)'"
+            //GroupCount 증가
+            let groupCountSQL = "UPDATE group_info SET group_count = group_count + 1 WHERE g_name = '\(receiveGroup)'"
                   
                    let groupUpdateResult = myDB.executeUpdate(groupUpdateSQL, withArgumentsIn: [])
+            myDB.executeUpdate(groupCountSQL, withArgumentsIn: [])
               }else{
               }
             
@@ -55,7 +57,7 @@ class MoneyAddVC: UIViewController {
             
     //        NotificationCenter.default.post(name: Notification.Name("reloadGroupTable"), object: nil)
         
-        
+        }
     }
     override func viewDidLoad() {
         personMoneyTvListView.delegate = self

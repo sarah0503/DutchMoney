@@ -33,7 +33,7 @@ class GroupMainVC: UIViewController {
             
         let myDB = FMDatabase(path: databasePath as String)
         if myDB.open(){
-            let sql_stmt = "CREATE TABLE IF NOT EXISTS group_info ( g_name TEXT NOT NULL, g_money INTEGER NOT NULL, group_count INTEGER, PRIMARY KEY(g_name)) "
+            let sql_stmt = "CREATE TABLE IF NOT EXISTS group_info ( g_name TEXT NOT NULL, g_money INTEGER NOT NULL, group_count INTEGER, PRIMARY KEY(g_name),) "
             if !myDB.executeStatements(sql_stmt){
                 
             }
@@ -145,7 +145,7 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
                 let delete_gSQL = "DELETE FROM group_info WHERE g_name = '\(GNames[indexPath.row])'"
                 let result1 = myDB.executeUpdate(delete_gSQL, withArgumentsIn: [])
                 //사람 지우기
-                let delete_pSQL = "DELETE FROM person_info WHEREg_name = '\(GNames[indexPath.row])'"
+                let delete_pSQL = "DELETE FROM person_info WHERE g_name = '\(GNames[indexPath.row])'"
                 let result2 = myDB.executeUpdate(delete_pSQL, withArgumentsIn: [])
                 //내역 지우기
                 let delete_mSQL = "DELETE FROM momey_list WHEREg_name = '\(GNames[indexPath.row])'"
