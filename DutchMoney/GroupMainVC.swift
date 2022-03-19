@@ -33,7 +33,7 @@ class GroupMainVC: UIViewController {
             
         let myDB = FMDatabase(path: databasePath as String)
         if myDB.open(){
-            let sql_stmt = "CREATE TABLE IF NOT EXISTS group_info ( g_name TEXT NOT NULL, g_money INTEGER NOT NULL, PRIMARY KEY(g_name)) "
+            let sql_stmt = "CREATE TABLE IF NOT EXISTS group_info ( g_name TEXT NOT NULL, g_money INTEGER NOT NULL, group_count INTEGER, PRIMARY KEY(g_name)) "
             if !myDB.executeStatements(sql_stmt){
                 
             }
@@ -103,21 +103,6 @@ class GroupMainVC: UIViewController {
         
         tvListView.reloadData()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//
-//
-//        NotificationCenter.default.removeObserver(self)
-//    }
 
 }
 
@@ -136,19 +121,11 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
 
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
-       // cell.textLabel?.text = GNames[indexPath.row]
         
         let groupcell = tableView.dequeueReusableCell(withIdentifier : "groupCell", for : indexPath) as! GroupCellTableViewCell
     
         groupcell.textLabel?.text = GNames[indexPath.row]
         groupcell.groupMoneyLabel.text = NSString(format:"%d",GMoneys[indexPath.row]) as String
-        //GroupCellTableViewCell.groupMonegyLabel = GMoneys[indexPath.row] as! String
-        
-//        cell.GroupLabelName.text = items[indexPath.row]
-
-        // Configure the cell...
-
         return groupcell
     }
     
@@ -164,9 +141,15 @@ extension GroupMainVC : UITableViewDelegate, UITableViewDataSource{
             let myDB = FMDatabase (path:databasePath)
             
             if myDB.open(){
-                let insertSQL = "DELETE FROM group_info WHERE g_name = '\(GNames[indexPath.row])'"
-                let result = myDB.executeUpdate(insertSQL, withArgumentsIn: [])
-                //tableView.deleteRows(at: [indexPath], with: .fade)
+                //그룹 지우기
+                let delete_gSQL = "DELETE FROM group_info WHERE g_name = '\(GNames[indexPath.row])'"
+                let result1 = myDB.executeUpdate(delete_gSQL, withArgumentsIn: [])
+                //사람 지우기
+                let delete_pSQL = "DELETE FROM person_info WHEREg_name = '\(GNames[indexPath.row])'"
+                let result2 = myDB.executeUpdate(delete_pSQL, withArgumentsIn: [])
+                //내역 지우기
+                let delete_mSQL = "DELETE FROM momey_list WHEREg_name = '\(GNames[indexPath.row])'"
+                let result3 = myDB.executeUpdate(delete_mSQL, withArgumentsIn: [])
             }
             
             if myDB.open(){

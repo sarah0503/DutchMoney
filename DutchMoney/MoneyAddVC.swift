@@ -148,51 +148,6 @@ extension MoneyAddVC : UITableViewDelegate, UITableViewDataSource{
                  return moneyaddcell
     }
     
-    internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-//        if editingStyle == .delete{
-//            let filemgr = FileManager.default
-//            let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)[0]
-//            let databasePath = dirPaths.appendingPathComponent("DutchMoney.sqlite").path
-//
-//            let myDB = FMDatabase (path:databasePath)
-//
-//            if myDB.open(){
-//                let insertSQL = "DELETE FROM group_info WHERE g_name = '\(GNames[indexPath.row])'"
-//                let result = myDB.executeUpdate(insertSQL, withArgumentsIn: [])
-//                //tableView.deleteRows(at: [indexPath], with: .fade)
-//            }
-//
-//            if myDB.open(){
-//                let sql = "SELECT * FROM group_info;"
-//                let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
-//
-//                if(result == nil){
-//                    print("Error: \(myDB.lastErrorMessage())")
-//                }else{
-//                    var gName = ""
-//                    var gMoney : Int32
-//                    GNames.removeAll()
-//                    GMoneys.removeAll()
-//
-//                    while(result?.next() == true){
-//                        gName = (result?.string(forColumn: "g_name"))!
-//                        gMoney = (result?.int(forColumn: "g_money"))!
-//
-//                        GNames.append(gName)
-//                        GMoneys.append(gMoney)
-//                    }
-//                }
-//            }else{
-//                print("Error: \(myDB.lastErrorMessage())")
-//            }
-//
-//
-//
-//        } else if editingStyle == .insert{
-//
-//        }
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "PersonSegue"{
 //            let cell = sender as! UITableViewCell

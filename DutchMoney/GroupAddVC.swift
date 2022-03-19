@@ -29,7 +29,7 @@ class GroupAddVC: UIViewController {
         let myDB = FMDatabase (path:databasePath)
         
         if myDB.open(){
-            let insertSQL = "INSERT INTO group_info VALUES ('\(tfAddItem.text!)', 0);"
+            let insertSQL = "INSERT INTO group_info VALUES ('\(tfAddItem.text!)', 0,0);"
             let result = myDB.executeUpdate(insertSQL, withArgumentsIn: [])
         }
     }
