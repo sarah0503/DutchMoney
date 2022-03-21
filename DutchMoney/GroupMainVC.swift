@@ -33,7 +33,7 @@ class GroupMainVC: UIViewController {
             
         let myDB = FMDatabase(path: databasePath as String)
         if myDB.open(){
-            let sql_stmt = "CREATE TABLE IF NOT EXISTS group_info ( g_name TEXT NOT NULL, g_money INTEGER NOT NULL, group_count INTEGER, PRIMARY KEY(g_name),) "
+            let sql_stmt = "CREATE TABLE IF NOT EXISTS group_info ( g_name TEXT NOT NULL, g_money INTEGER NOT NULL, group_count INTEGER, PRIMARY KEY(g_name)) "
             if !myDB.executeStatements(sql_stmt){
                 
             }

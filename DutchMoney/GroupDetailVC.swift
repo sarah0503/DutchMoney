@@ -34,7 +34,7 @@ class GroupDetailVC: UIViewController {
             
         let myDB = FMDatabase(path: databasePath as String)
         if myDB.open(){
-            let sql_stmt = "CREATE TABLE IF NOT EXISTS person_info ( p_name TEXT NOT NULL, p_money INTEGER DEFAULT 0, g_name TEXT, PRIMARY KEY(p_name,g_name), FOREIGN KEY(g_name) REFERENCES group_info(g_name) ) "
+            let sql_stmt = "CREATE TABLE IF NOT EXISTS person_info ( p_name TEXT NOT NULL, p_money INTEGER DEFAULT 0, g_name TEXT, PRIMARY KEY(p_name,g_name), FOREIGN KEY(g_name) REFERENCES group_info(g_name) ) ;"
             if !myDB.executeStatements(sql_stmt){
             }
         }
@@ -46,7 +46,6 @@ class GroupDetailVC: UIViewController {
                 PNames.removeAll()
                 PMoneys.removeAll()
                 let sql = "SELECT * FROM person_info WHERE g_name = '\(receiveGroup)';"
-                print(receiveGroup)
                 let result:FMResultSet? = myDB.executeQuery(sql, withParameterDictionary : nil)
                 
                 if(result == nil){
