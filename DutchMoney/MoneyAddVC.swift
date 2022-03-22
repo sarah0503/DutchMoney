@@ -22,7 +22,7 @@ class MoneyAddVC: UIViewController {
         
         //DB생성
         if myDB.open(){
-            let sql_stmt = "CREATE TABLE IF NOT EXISTS money_list ( m_name TEXT, money INTEGER, g_name  TEXT, m_id INTEGER, FOREIGN KEY(g_name) REFERENCES group_info(g_name), PRIMARY KEY (m_id))"
+            let sql_stmt = "CREATE TABLE IF NOT EXISTS money_list ( m_name TEXT, money INTEGER, g_name  TEXT, m_id INTEGER, FOREIGN KEY(g_name) REFERENCES group_info(g_name), PRIMARY KEY (m_id, g_name))"
             if !myDB.executeStatements(sql_stmt){
             }
             let gpmSQL = "CREATE TABLE IF NOT EXISTS gpm_table ( group_name TEXT, person_name TEXT, m_id INTEGER);"
@@ -32,14 +32,17 @@ class MoneyAddVC: UIViewController {
                   //let insertSQL = "INSERT INTO person_info VALUES ('\(tfAddItem.text!)', 0, '\(receiveGroup)');"
                   //let money:Int? = Int(moneyTf.text!)
                   let money = ( (moneyTf.text!) as NSString).integerValue
-                  let money_idSQL = "SELECT group_count FROM group_info WHERE g_name = '\(receiveGroup)';"
-            print(money_idSQL)
-            let money_id_result:FMResultSet? = myDB.executeQuery(money_idSQL, withParameterDictionary : nil)
+                  let money_idSQL = "SELECT * FROM group_info WHERE g_name = '\(receiveGroup)';"
             
-            let money_id = money_id_result!.int(forColumn: "group_count")
-                  let money_insertSQL = "INSERT INTO money_list VALUES ('\(moneyNameTf.text!)', '\(money)', '\(receiveGroup)', '\(money_id)');"
-            print(money_insertSQL)
-            let result = myDB.executeQuery(money_insertSQL, withArgumentsIn: [])
+            let money_id_result = myDB.executeQuery(money_idSQL, withParameterDictionary : nil)
+            //let money_id = 0
+            while money_id_result?.next() == true{
+             let money_id = money_id_result!.int(forColumn: "group_count")
+                let money_insertSQL = "INSERT INTO money_list VALUES ('\(moneyNameTf.text!)', '\(money)', '\(receiveGroup)', '\(money_id)');"
+          print(money_insertSQL)
+          let result = myDB.executeUpdate(money_insertSQL, withArgumentsIn: [])
+            }
+            
             
                 /***************gpm_tabel에 넣기*************/
             //사람이름 몽땅 가져오기
